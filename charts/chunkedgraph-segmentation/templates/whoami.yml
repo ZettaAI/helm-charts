@@ -1,0 +1,42 @@
+{{ if .Values.whoami }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: whoami
+  annotations:
+    mirror.linkerd.io/gateway-name: linkerd-gateway
+    mirror.linkerd.io/gateway-ns: linkerd-multicluster  
+spec:
+  ports:
+    - protocol: TCP
+      name: web
+      port: 80
+  selector:
+    app: whoami
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: whoami
+  labels:
+    app: whoami
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: whoami
+  template:
+    metadata:
+      annotations:
+        rollme: {{ randAlphaNum 5 | quote }}
+        linkerd.io/inject: enabled
+      labels:
+        app: whoami
+    spec:
+      containers:
+        - name: whoami
+          image: containous/whoami
+          ports:
+            - name: web
+              containerPort: 80
+{{ end }}        

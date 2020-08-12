@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name | quote }}
+  labels:
+    app: {{ .Chart.Name | quote }}
+    {{- template "chunkedgraphSegmentation.basic-labels" . }}
+spec:
+{{- if not .Values.deployment.hpa.enabled }}
+  replicas: {{ .Values.deployment.replicaCount }}
+{{- end }}
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name | quote }}
+  template:
+    metadata:
+      annotations:
+        rollme: {{ randAlphaNum 5 | quote }}
+        {{- range .Values.deployment.annotations }}
+        {{- . }}
+        {{- end }}        
+      labels:
+        app: {{ .Chart.Name | quote }}
+    spec:
+      {{- template "chunkedgraphSegmentation.volumes" . }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: >-
+            {{ .Values.deployment.image.repository }}:{{ .Values.deployment.image.tag }}
+          imagePullPolicy: {{ .Values.deployment.image.pullPolicy | quote }}
+          ports:
+            {{- toYaml .Values.deployment.ports | nindent 12 }}
+          resources:
+            {{- toYaml .Values.deployment.resources | nindent 12 }}
+          envFrom:
+          {{- range .Values.env }}
+          - configMapRef:
+              name: {{ .name }}
+          {{- end }}
+          {{- template "chunkedgraphSegmentation.volume-mounts" . }}
+          # TODO gunicorn config
+          {{- if .Values.deployment.startServer }}
+          command: [bash, -c, "gunicorn -b '0.0.0.0:80' -w 4 -k uvicorn.workers.UvicornWorker -t 300 app.main:app"]
+          {{- else }}
+          command: [bash, -c, "trap : TERM INT; sleep infinity & wait"]
+          {{- end }}
+      nodeSelector:
+        cloud.google.com/gke-nodepool: read
