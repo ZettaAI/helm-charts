@@ -3,12 +3,12 @@ entries:
   chunkedgraph-segmentation:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-08-12T17:38:29.245320944+05:30"
+    created: "2020-08-12T18:01:33.152441399+05:30"
     description: Deployment for chunkedgraph segmentation APIs.
-    digest: 22418f310e61c471eeb27b2246baefa158f6b60f1fe1a6c7eb1a6e1924e582bd
+    digest: 6902d3dcae7d16365ca4a6b2ec2df3f799210e306bc3d3f0afdb62efc2a0b613
     name: chunkedgraph-segmentation
     type: application
     urls:
     - chunkedgraph-segmentation-0.1.0.tgz
     version: 0.1.0
-generated: "2020-08-12T17:38:29.244490143+05:30"
+generated: "2020-08-12T18:01:33.151630294+05:30"
