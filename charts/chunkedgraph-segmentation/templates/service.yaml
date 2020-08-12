@@ -3,10 +3,7 @@ kind: Service
 metadata:
   name: {{ .Chart.Name | quote }}
   annotations:
-    place-holder: place-holder-annotation
-    {{- range .Values.service.annotations }}
-    {{- . }}
-    {{- end }}
+    {{- toYaml .Values.service.annotations | nindent 4 }}
   labels:
     app: {{ .Chart.Name | quote }}
 spec:

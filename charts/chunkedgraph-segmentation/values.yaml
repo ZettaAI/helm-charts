@@ -1,8 +1,3 @@
-# Cert Manager
-certManager:
-  api: "cert-manager.io/v1alpha2"
-
-
 # add a service and deployment for testing
 whoami: false
 
@@ -19,14 +14,14 @@ env: []
 
 
 service:
-  annotations: []
+  annotations: {}
   type: NodePort
   port: 80
   portName: web
   protocol: TCP
 deployment:
   nodeSelector: {}
-  annotations: []
+  annotations: {}
   startServer: false
   image:
     repository: "gcr.io/zetta-lee-fly-vnc-001/graph-server"

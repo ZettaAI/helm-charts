@@ -15,9 +15,7 @@ spec:
     metadata:
       annotations:
         rollme: {{ randAlphaNum 5 | quote }}
-        {{- range .Values.deployment.annotations }}
-        {{- . }}
-        {{- end }}        
+        {{- toYaml .Values.deployment.annotations | nindent 8 }}
       labels:
         app: {{ .Chart.Name | quote }}
     spec:
