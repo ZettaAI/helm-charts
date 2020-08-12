@@ -20,15 +20,13 @@ env: []
 
 service:
   annotations: []
-    # linkerd.io/inject: enabled    
   type: NodePort
   port: 80
   portName: web
   protocol: TCP
 deployment:
+  nodeSelector: {}
   annotations: []
-    # mirror.linkerd.io/gateway-name: linkerd-gateway
-    # mirror.linkerd.io/gateway-ns: linkerd-multicluster
   startServer: false
   image:
     repository: "gcr.io/zetta-lee-fly-vnc-001/graph-server"

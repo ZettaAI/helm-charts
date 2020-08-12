@@ -1,14 +1,5 @@
-{{/* Generate basic labels */}}
-{{- define "chunkedgraphSegmentation.basic-labels" }}
-    generator: helm
-    date: {{ now | htmlDate }}
-    chart: {{ $.Chart.Name }}
-    version: {{ $.Chart.Version }}
-{{- end }}
-
-
 {{/* Generate cloudvolume secret volumes */}}
-{{- define "chunkedgraphSegmentation.volumes" }}
+{{- define "chunkedgraph-segmentation.volumes" }}
       volumes:
       {{- range $path, $_ := .Files.Glob printf "%s/*" trimSuffix "/" (required "cloudvolume secrets dir" .Values.cloudvolumeSecretsPath) }}
       {{- $fname := $path | base }}
@@ -21,7 +12,7 @@
 
 
 {{/* Generate cloudvolume secret volume mounts */}}
-{{- define "chunkedgraphSegmentation.volume-mounts" }}
+{{- define "chunkedgraph-segmentation.volume-mounts" }}
           volumeMounts:
           {{- range $path, $_ := .Files.Glob printf "%s/*" trimSuffix "/" (required "cloudvolume secrets dir" .Values.cloudvolumeSecretsPath) }}
           {{- $fname := $path | base }}

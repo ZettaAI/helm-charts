@@ -4,7 +4,6 @@ metadata:
   name: {{ .Chart.Name | quote }}
   labels:
     app: {{ .Chart.Name | quote }}
-    {{- template "chunkedgraphSegmentation.basic-labels" . }}
 spec:
 {{- if not .Values.deployment.hpa.enabled }}
   replicas: {{ .Values.deployment.replicaCount }}
@@ -22,7 +21,7 @@ spec:
       labels:
         app: {{ .Chart.Name | quote }}
     spec:
-      {{- template "chunkedgraphSegmentation.volumes" . }}
+      {{- template "chunkedgraph-segmentation.volumes" . }}
       containers:
         - name: {{ .Chart.Name }}
           image: >-
@@ -37,7 +36,7 @@ spec:
           - configMapRef:
               name: {{ .name }}
           {{- end }}
-          {{- template "chunkedgraphSegmentation.volume-mounts" . }}
+          {{- template "chunkedgraph-segmentation.volume-mounts" . }}
           # TODO gunicorn config
           {{- if .Values.deployment.startServer }}
           command: [bash, -c, "gunicorn -b '0.0.0.0:80' -w 4 -k uvicorn.workers.UvicornWorker -t 300 app.main:app"]
@@ -45,4 +44,4 @@ spec:
           command: [bash, -c, "trap : TERM INT; sleep infinity & wait"]
           {{- end }}
       nodeSelector:
-        cloud.google.com/gke-nodepool: read
+        {{- toYaml .Values.deployment.nodeSelector | nindent 8 }}
