@@ -1,5 +1,5 @@
 apiVersion: v2
-name: chunkedgraphSegmentation
+name: chunkedgraph-segmentation
 description: "Deployment for chunkedgraph segmentation APIs."
 type: application
 version: 0.1.0
