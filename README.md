@@ -4,4 +4,4 @@
 
 Available charts:
 
-- [Segmentation](http:/zettaai.github.io/helm-charts/charts/chunkedgraph-segmentation)
+- [ChunkedGraph](http:/zettaai.github.io/helm-charts/charts/chunkedgraph)
