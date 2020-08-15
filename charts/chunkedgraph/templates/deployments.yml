@@ -1,0 +1,5 @@
+{{- $commonArgs := (dict "chart" .Chart.Name "env" .Values.env  "cloudVolumeSecrets" .Values.cloudVolumeSecrets) }}
+{{- template "cg.deployment" (dict "deployment" .Values.readDeployment "args" $commonArgs) }}
+{{- template "cg.deployment" (dict "deployment" .Values.editDeployment "args" $commonArgs) }}
+{{- template "cg.deployment" (dict "deployment" .Values.meshDeployment "args" $commonArgs) }}
+{{- template "cg.deployment" (dict "deployment" .Values.remeshDeployment "args" $commonArgs) }}

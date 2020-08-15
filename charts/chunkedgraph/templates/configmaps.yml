@@ -1,0 +1,6 @@
+# env configmaps from values
+{{- template "cg.configmaps" (dict "env" .Values.env "prefix" $.Chart.Name) }}
+{{- template "cg.configmaps" (dict "env" .Values.readDeployment.env "prefix" .Values.readDeployment.name) }}
+{{- template "cg.configmaps" (dict "env" .Values.editDeployment.env "prefix" .Values.editDeployment.name) }}
+{{- template "cg.configmaps" (dict "env" .Values.meshDeployment.env "prefix" .Values.meshDeployment.name) }}
+{{- template "cg.configmaps" (dict "env" .Values.remeshDeployment.env "prefix" .Values.remeshDeployment.name) }}

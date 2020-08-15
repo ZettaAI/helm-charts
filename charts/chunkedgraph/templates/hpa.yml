@@ -1,0 +1,4 @@
+{{- template "cg.hpa" (dict "deployment" .Values.readDeployment "Chart" $.Chart) }}
+{{- template "cg.hpa" (dict "deployment" .Values.editDeployment "Chart" $.Chart) }}
+{{- template "cg.hpa" (dict "deployment" .Values.meshDeployment "Chart" $.Chart) }}
+{{- template "cg.hpa" (dict "deployment" .Values.remeshDeployment "Chart" $.Chart) }}
