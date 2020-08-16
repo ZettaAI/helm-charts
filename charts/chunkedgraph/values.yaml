@@ -29,7 +29,7 @@ readService:
   annotations: {}
   type: ClusterIP
   port: 80
-  targetPort: &readPort 81
+  targetPort: &readPort 80
   portName: web
   protocol: TCP
 readDeployment:
@@ -70,7 +70,7 @@ editService:
   annotations: {}
   type: ClusterIP
   port: 80
-  targetPort: &editPort 82
+  targetPort: &editPort 80
   portName: web
   protocol: TCP
 editDeployment:
@@ -112,7 +112,7 @@ meshService:
   annotations: {}
   type: ClusterIP
   port: 80
-  targetPort: &meshPort 83
+  targetPort: &meshPort 80
   portName: web
   protocol: TCP
 meshDeployment:
@@ -153,7 +153,7 @@ remeshService:
   annotations: {}
   type: ClusterIP
   port: 80
-  targetPort: &remeshPort 84
+  targetPort: &remeshPort 80
   portName: web
   protocol: TCP
 remeshDeployment:
