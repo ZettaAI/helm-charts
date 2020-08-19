@@ -3,7 +3,17 @@ entries:
   chunkedgraph:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-08-16T16:21:25.44717186+05:30"
+    created: "2020-08-19T16:01:25.222993465+05:30"
+    description: Deployment for chunkedgraph APIs.
+    digest: 16f62fd5869ddf5fd561778d4b2a57f5751e4486339f30fe06001ec18048fec7
+    name: chunkedgraph
+    type: application
+    urls:
+    - chunkedgraph-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2020-08-19T16:01:25.221539869+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 8e9ace357232bf24bfd187a3d9f1a1c4a151be579adcb000d6c021427ead97fb
     name: chunkedgraph
@@ -11,4 +21,4 @@ entries:
     urls:
     - chunkedgraph-0.1.0.tgz
     version: 0.1.0
-generated: "2020-08-16T16:21:25.445677255+05:30"
+generated: "2020-08-19T16:01:25.219749313+05:30"

@@ -33,7 +33,12 @@ spec:
         - name: {{ $name | quote }}
           secret:
             secretName: {{ $fname | quote }}
-      {{- end }}      
+      {{- end }}
+      {{- if .args.datasets }}
+        - name: datasets-volume
+          configMap:
+            name: {{ .args.chart }}-datasets
+      {{- end }}
       containers:
         - name: {{ .deployment.name | quote }}
           image: >-
@@ -60,9 +65,14 @@ spec:
               mountPath: /root/.cloudvolume/secrets/{{ $fname }}
               subPath: {{ $fname | quote }}
               readOnly: true
-          {{- end }}          
-          {{- if .deployment.startServer }}
-          command: [bash, -c, "gunicorn -c gunicorn.config.py app.main:app"]
+          {{- end }}
+          {{- if .args.datasets }}
+            - name: datasets-volume
+              mountPath: /app/datasets
+          {{- end }}
+          {{- if .deployment.command }}
+          command:
+            {{- toYaml .deployment.command | nindent 12 }}
           {{- else }}
           command: [bash, -c, "trap : TERM INT; sleep infinity & wait"]
           {{- end }}

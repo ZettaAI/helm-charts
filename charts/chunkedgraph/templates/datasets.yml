@@ -1,0 +1,11 @@
+{{- if .Values.datasets }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}-datasets
+data:
+  {{- range .Values.datasets }}
+  {{ .name }}: |-
+    {{- toYaml .config | nindent 4 }}
+  {{- end }}
+{{- end }}  

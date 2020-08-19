@@ -14,10 +14,7 @@ spec:
     app: {{ .target | quote }}
   type: {{ .service.type }}
   ports:
-    - port: {{ .service.port }}
-      protocol: {{ .service.protocol | quote }}
-      name: {{ .service.portName | quote }}
-      targetPort: {{ .service.targetPort }}
+    {{- toYaml .service.ports | nindent 4 }}
 ---
 {{- end }}
 {{- end }}

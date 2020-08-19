@@ -12,6 +12,9 @@ env: []
 #     SHELL: /bin/bash
 
 
+datasets: []
+
+
 # file names of secret keys for cloudvolume
 # these will be mounted as volumes
 # eg: if a file name is secret.json
@@ -28,30 +31,20 @@ readService:
   name: &readServiceName "chunkedgraph-read"
   annotations: {}
   type: ClusterIP
-  port: 80
-  targetPort: &readPort 80
-  portName: web
-  protocol: TCP
+  ports: []
 readDeployment:
   enabled: *readServiceEnabled
   name: *readServiceName
   nodeSelector: {}
   annotations: {}
-  startServer: true
   image:
     repository: null
     tag: null
     pullPolicy: Always
-  env:
-    - name: "app-server"
-      vars:
-        GRAPH_SERVER_PORT: *readPort
-        GRAPH_SERVER_WORKERS: 3
+  command: []
+  env: []
   replicaCount: 1
-  ports:
-    - name: http
-      protocol: TCP
-      containerPort: *readPort
+  ports: []
   resources:
     requests:
       cpu: 450m
@@ -69,31 +62,20 @@ editService:
   name: &editServiceName "chunkedgraph-edit"
   annotations: {}
   type: ClusterIP
-  port: 80
-  targetPort: &editPort 80
-  portName: web
-  protocol: TCP
+  ports: []
 editDeployment:
   enabled: *editServiceEnabled
   name: *editServiceName
   nodeSelector: {}
   annotations: {}
-  startServer: true
+  command: []
   image:
     repository: null
     tag: null
     pullPolicy: Always
-  env:
-    - name: "app-server"
-      vars:
-        GRAPH_SERVER_PORT: *editPort
-        GRAPH_SERVER_WORKERS: 2
-        REMESH_SERVICE: "http://chunkedgraph-remesh"
+  env: []
   replicaCount: 1
-  ports:
-    - name: http
-      protocol: TCP
-      containerPort: *editPort
+  ports: []
   resources:
     requests:
       cpu: 600m
@@ -111,30 +93,20 @@ meshService:
   name: &meshServiceName "chunkedgraph-mesh"
   annotations: {}
   type: ClusterIP
-  port: 80
-  targetPort: &meshPort 80
-  portName: web
-  protocol: TCP
+  ports: []
 meshDeployment:
   enabled: *meshServiceEnabled
   name: *meshServiceName
   nodeSelector: {}
   annotations: {}
-  startServer: true
+  command: []
   image:
     repository: null
     tag: null
     pullPolicy: Always
-  env:
-    - name: "app-server"
-      vars:
-        GRAPH_SERVER_PORT: *meshPort
-        GRAPH_SERVER_WORKERS: 3
+  env: []
   replicaCount: 1
-  ports:
-    - name: http
-      protocol: TCP
-      containerPort: *meshPort
+  ports: []
   resources:
     requests:
       cpu: 450m
@@ -152,30 +124,20 @@ remeshService:
   name: &remeshServiceName "chunkedgraph-remesh"
   annotations: {}
   type: ClusterIP
-  port: 80
-  targetPort: &remeshPort 80
-  portName: web
-  protocol: TCP
+  ports: []
 remeshDeployment:
   enabled: *remeshServiceEnabled
   name: *remeshServiceName
   nodeSelector: {}
   annotations: {}
-  startServer: true
+  command: []
   image:
     repository: null
     tag: null
     pullPolicy: Always
-  env:
-    - name: "app-server"
-      vars:
-        GRAPH_SERVER_PORT: *remeshPort
-        GRAPH_SERVER_WORKERS: 2
+  env: []
   replicaCount: 1
-  ports:
-    - name: http
-      protocol: TCP
-      containerPort: *remeshPort
+  ports: []
   resources:
     requests:
       cpu: 1
