@@ -5,3 +5,4 @@
 Available charts:
 
 - [ChunkedGraph](http:/zettaai.github.io/helm-charts/charts/chunkedgraph)
+- [Traefik Routes](http:/zettaai.github.io/helm-charts/charts/traefik-routes)

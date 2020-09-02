@@ -1,0 +1,9 @@
+apiVersion: v2
+name: traefik-routes
+description: |-
+  Chart for installing traefik routes. Requires Traefik Kubernetes CRDs.
+  Includes template helpers for routes and middlewares.
+  Currently supports only 3 entrypoints web(80), websecure(443) and traefik(8080).
+type: application
+version: 0.1.0
+appVersion: 0.1.0

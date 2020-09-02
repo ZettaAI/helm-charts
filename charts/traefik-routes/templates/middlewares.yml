@@ -1,0 +1,12 @@
+{{- range .Values.headerMiddlewares }}
+{{- template "traefik.headerMiddleware" . }}
+{{- end }}
+
+{{- range .Values.redirectMiddlewares }}
+{{- template "traefik.redirectMiddleware" . }}
+{{- end }}
+
+{{- range .Values.basicAuthMiddlewares }}
+{{- template "traefik.basicAuthMiddleware" . }}
+{{- end }}
+
