@@ -3,7 +3,7 @@ entries:
   chunkedgraph:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-02T16:23:11.528363345+05:30"
+    created: "2020-09-02T16:28:41.267930854+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 16f62fd5869ddf5fd561778d4b2a57f5751e4486339f30fe06001ec18048fec7
     name: chunkedgraph
@@ -13,7 +13,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-02T16:23:11.526603236+05:30"
+    created: "2020-09-02T16:28:41.266621281+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 8e9ace357232bf24bfd187a3d9f1a1c4a151be579adcb000d6c021427ead97fb
     name: chunkedgraph
@@ -24,15 +24,15 @@ entries:
   traefik-routes:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-02T16:23:11.529907668+05:30"
+    created: "2020-09-02T16:28:41.268634311+05:30"
     description: |-
       Chart for installing traefik routes. Requires Traefik Kubernetes CRDs.
       Includes template helpers for routes and middlewares.
       Currently supports only 3 entrypoints web(80), websecure(443) and traefik(8080).
-    digest: a88d01d933c078bcae8cff9bb09d6a4ff31dedf2bebc441b198e4cbe62ce7c12
+    digest: 023581498d84f0b1cc2ed12334bd7c28185e9cce5181acab2cbe357c1bfdb148
     name: traefik-routes
     type: application
     urls:
     - traefik-routes-0.1.0.tgz
     version: 0.1.0
-generated: "2020-09-02T16:23:11.523673746+05:30"
+generated: "2020-09-02T16:28:41.265133061+05:30"
