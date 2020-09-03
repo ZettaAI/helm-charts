@@ -10,3 +10,11 @@
 {{- template "traefik.basicAuthMiddleware" . }}
 {{- end }}
 
+{{- range .Values.stripPrefixMiddlewares }}
+{{- template "traefik.stripPrefixMiddleware" . }}
+{{- end }}
+
+{{- range .Values.chainMiddlewares }}
+{{- template "traefik.chainMiddleware" . }}
+{{- end }}
+

@@ -3,7 +3,7 @@ entries:
   chunkedgraph:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-03T12:25:16.9040159+05:30"
+    created: "2020-09-03T14:07:25.741402223+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 7347a614567618e74dcb75f6039e970dc434329b11fadb28681e69b10dadcf40
     name: chunkedgraph
@@ -13,7 +13,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-03T12:25:16.902830254+05:30"
+    created: "2020-09-03T14:07:25.739801116+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 16f62fd5869ddf5fd561778d4b2a57f5751e4486339f30fe06001ec18048fec7
     name: chunkedgraph
@@ -23,7 +23,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-03T12:25:16.901374463+05:30"
+    created: "2020-09-03T14:07:25.738574319+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 8e9ace357232bf24bfd187a3d9f1a1c4a151be579adcb000d6c021427ead97fb
     name: chunkedgraph
@@ -34,15 +34,28 @@ entries:
   traefik-routes:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-03T12:25:16.904776428+05:30"
+    created: "2020-09-03T14:07:25.742936053+05:30"
     description: |-
       Chart for installing traefik routes. Requires Traefik Kubernetes CRDs.
       Includes template helpers for routes and middlewares.
       Currently supports only 3 entrypoints web(80), websecure(443) and traefik(8080).
-    digest: 023581498d84f0b1cc2ed12334bd7c28185e9cce5181acab2cbe357c1bfdb148
+    digest: f0f03b7b65d03b810b7b322b43fd2726abdae5b516dc9c60b08bdf14854f2a41
+    name: traefik-routes
+    type: application
+    urls:
+    - traefik-routes-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2020-09-03T14:07:25.742322784+05:30"
+    description: |-
+      Chart for installing traefik routes. Requires Traefik Kubernetes CRDs.
+      Includes template helpers for routes and middlewares.
+      Currently supports only 3 entrypoints web(80), websecure(443) and traefik(8080).
+    digest: 4629c23d2631019ce394f68d6e7fdc3a1f8f1431758fb32e5ab9543f9bbd8581
     name: traefik-routes
     type: application
     urls:
     - traefik-routes-0.1.0.tgz
     version: 0.1.0
-generated: "2020-09-03T12:25:16.895724537+05:30"
+generated: "2020-09-03T14:07:25.737080253+05:30"

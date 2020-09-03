@@ -41,3 +41,30 @@ spec:
 {{- end }}
 
 
+{{- define "traefik.stripPrefixMiddleware" }}
+apiVersion: "traefik.containo.us/v1alpha1"
+kind: Middleware
+metadata:
+  name: {{ .name }}
+  namespace: {{ .namespace | default "default" | quote }}
+spec:
+  stripPrefix:
+    {{- toYaml .stripPrefix | nindent 4 }}
+---
+{{- end }}
+
+
+{{- define "traefik.chainMiddleware" }}
+apiVersion: "traefik.containo.us/v1alpha1"
+kind: Middleware
+metadata:
+  name: {{ .name }}
+  namespace: {{ .namespace | default "default" | quote }}
+spec:
+  chain:
+    middlewares:
+    {{- range .middlewares }}
+    - name: {{ . | quote }}
+    {{- end }}
+---
+{{- end }}

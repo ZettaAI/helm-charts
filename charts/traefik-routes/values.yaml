@@ -1,4 +1,6 @@
 headerMiddlewares: []
 redirectMiddlewares: []
 basicAuthMiddlewares: []
+stripPrefixMiddlewares: []
+chainMiddlewares: []
 routes: []
