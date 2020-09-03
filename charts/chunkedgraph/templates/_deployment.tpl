@@ -45,8 +45,6 @@ spec:
         - name: {{ .deployment.name | quote }}
           image: >-
             {{ required "repo" .deployment.image.repository }}:{{ required "tag" .deployment.image.tag }}
-          imagePullSecrets:
-            {{- toYaml .deployment.image.pullSecrets | nindent 12 }}
           imagePullPolicy: {{ .deployment.image.pullPolicy | quote }}
           ports:
             {{- toYaml .deployment.ports | nindent 12 }}
@@ -80,6 +78,8 @@ spec:
           {{- else }}
           command: [bash, -c, "trap : TERM INT; sleep infinity & wait"]
           {{- end }}
+      imagePullSecrets:
+        {{- toYaml .deployment.imagePullSecrets | nindent 8 }}
       nodeSelector:
         {{- toYaml .deployment.nodeSelector | nindent 8 }}
 ---
