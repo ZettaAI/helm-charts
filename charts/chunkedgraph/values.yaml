@@ -42,6 +42,7 @@ readDeployment:
     repository: null
     tag: null
     pullPolicy: Always
+    pullSecrets: []
   command: []
   env: []
   replicaCount: 1
@@ -75,6 +76,7 @@ editDeployment:
     repository: null
     tag: null
     pullPolicy: Always
+    pullSecrets: []
   env: []
   replicaCount: 1
   ports: []
@@ -107,6 +109,7 @@ meshDeployment:
     repository: null
     tag: null
     pullPolicy: Always
+    pullSecrets: []
   env: []
   replicaCount: 1
   ports: []
@@ -139,6 +142,7 @@ remeshDeployment:
     repository: null
     tag: null
     pullPolicy: Always
+    pullSecrets: []
   env: []
   replicaCount: 1
   ports: []
