@@ -26,6 +26,8 @@ spec:
       labels:
         app: {{ .deployment.name | quote }}
     spec:
+      affinity:
+        {{- toYaml .deployment.affinity | nindent 8 }}
       volumes:
       {{- range .args.cloudVolumeSecrets }}
       {{- $fname := . }}
@@ -56,7 +58,7 @@ spec:
           {{- range .deployment.env }}
           - configMapRef:
               name: {{ printf "%s-%s" $deploymentName .name }}
-          {{- end }}          
+          {{- end }}
           volumeMounts:
           {{- range .args.cloudVolumeSecrets }}
           {{- $fname := . }}
