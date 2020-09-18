@@ -13,6 +13,17 @@ env: []
 
 
 datasets: []
+# example
+# - name: wc-lee-vnc.yml
+#   config:
+#     graph_id: vnc1_full_v3align_2
+#     backend_client:
+#       TYPE: bigtable
+#       CONFIG:
+#         ADMIN: true
+#         READ_ONLY: false
+#         PROJECT: zetta-lee-fly-vnc-001
+#         INSTANCE: chunkedgraphs
 
 
 # file names of secret keys for cloudvolume

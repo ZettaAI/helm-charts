@@ -3,7 +3,7 @@ entries:
   chunkedgraph:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-03T17:46:57.247260046+05:30"
+    created: "2020-09-18T13:19:00.720449789+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 5f7feaac081ef03fddb7bff7a9fc3eb503a56e11e4452b63314a88267d2c1c6e
     name: chunkedgraph
@@ -13,7 +13,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-03T17:46:57.24600832+05:30"
+    created: "2020-09-18T13:19:00.719347247+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 7347a614567618e74dcb75f6039e970dc434329b11fadb28681e69b10dadcf40
     name: chunkedgraph
@@ -23,7 +23,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-03T17:46:57.244668547+05:30"
+    created: "2020-09-18T13:19:00.718307823+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 16f62fd5869ddf5fd561778d4b2a57f5751e4486339f30fe06001ec18048fec7
     name: chunkedgraph
@@ -31,20 +31,23 @@ entries:
     urls:
     - chunkedgraph-0.2.0.tgz
     version: 0.2.0
+  linkerd-mtls:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-03T17:46:57.243454673+05:30"
-    description: Deployment for chunkedgraph APIs.
-    digest: 8e9ace357232bf24bfd187a3d9f1a1c4a151be579adcb000d6c021427ead97fb
-    name: chunkedgraph
+    created: "2020-09-18T13:19:00.721001598+05:30"
+    description: |-
+      Installs supporting elements for Linkerd multicluster communication.
+      Assumes that cert-manager is installed.
+    digest: 132742ed5334b5289bac2a90a44a6f91e694d496d02115659040076d28931684
+    name: linkerd-mtls
     type: application
     urls:
-    - chunkedgraph-0.1.0.tgz
+    - linkerd-mtls-0.1.0.tgz
     version: 0.1.0
   traefik-routes:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-03T17:46:57.24917959+05:30"
+    created: "2020-09-18T13:19:00.721905236+05:30"
     description: |-
       Chart for installing traefik routes. Requires Traefik Kubernetes CRDs.
       Includes template helpers for routes and middlewares.
@@ -57,7 +60,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-03T17:46:57.248344397+05:30"
+    created: "2020-09-18T13:19:00.72147295+05:30"
     description: |-
       Chart for installing traefik routes. Requires Traefik Kubernetes CRDs.
       Includes template helpers for routes and middlewares.
@@ -68,4 +71,4 @@ entries:
     urls:
     - traefik-routes-0.1.0.tgz
     version: 0.1.0
-generated: "2020-09-03T17:46:57.241902647+05:30"
+generated: "2020-09-18T13:19:00.717179707+05:30"

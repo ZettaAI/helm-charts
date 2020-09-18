@@ -1,0 +1,30 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: {{ .Values.trustAnchorName }}
+  namespace: {{ .Values.namespace }}
+spec:
+  ca:
+    secretName: {{ .Values.trustAnchorName }}
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ .Values.identityCertificate.name }}
+  namespace: {{ .Values.namespace }}
+spec:
+  secretName: {{ .Values.identityCertificate.name }}
+  duration: {{ .Values.identityCertificate.duration }}
+  renewBefore: {{ .Values.identityCertificate.renewBefore }}
+  issuerRef:
+    name: {{ .Values.trustAnchorName }}
+    kind: Issuer
+  commonName: identity.linkerd.cluster.local
+  isCA: true
+  privateKey:
+    algorithm: ECDSA
+  usages:
+  - cert sign
+  - crl sign
+  - server auth
+  - client auth

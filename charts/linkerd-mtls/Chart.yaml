@@ -1,0 +1,9 @@
+apiVersion: v2
+name: linkerd-mtls
+# https://linkerd.io/2/tasks/automatically-rotating-control-plane-tls-credentials/
+description: |-
+  Installs supporting elements for Linkerd multicluster communication.
+  Assumes that cert-manager is installed.
+type: application
+version: 0.1.0
+appVersion: 0.1.0

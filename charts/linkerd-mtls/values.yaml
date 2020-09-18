@@ -1,0 +1,9 @@
+namespace: "linkerd"
+trustAnchorName: "linkerd-trust-anchor"
+identityCertificate:
+  name: "linkerd-identity-issuer"
+  duration: 240h
+  renewBefore: 10h
+certificateAuthority:
+  crt: "<contents of .crt>"
+  key: "<contents of .key>"
