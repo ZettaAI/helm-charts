@@ -1,0 +1,11 @@
+installCRDs: true
+nodeSelector: {}
+
+affinity:
+  nodeAffinity:
+    preferredDuringSchedulingIgnoredDuringExecution:
+    - preference:
+        matchExpressions:
+        - key: cloud.google.com/gke-preemptible
+          operator: Exists
+      weight: 100

@@ -1,0 +1,68 @@
+# https://hub.helm.sh/charts/linkerd2/linkerd2
+global:
+  proxy:
+    logLevel: "warn,linkerd=info"
+    resources:
+      cpu:
+        request: 100m
+        limit: "1"
+      memory:
+        request: 20Mi
+        limit: 250Mi
+
+enablePodAntiAffinity: true
+nodeSelector:
+  beta.kubernetes.io/os: linux
+  cloud.google.com/gke-nodepool: read
+
+identity:
+  issuer:
+    scheme: "kubernetes.io/tls"
+
+# controller configuration
+controllerReplicas: 1
+controllerResources: &controller_resources
+  cpu: &controller_resources_cpu
+    request: 50m
+    limit: "500m"
+  memory:
+    request: 50Mi
+    limit: 250Mi
+destinationResources: *controller_resources
+publicAPIResources: *controller_resources
+
+# identity configuration
+identityResources:
+  cpu: *controller_resources_cpu
+  memory:
+    limit: 250Mi
+    request: 10Mi
+
+# grafana configuration
+grafana:
+  enabled: false
+
+# heartbeat configuration
+heartbeatResources: *controller_resources
+
+# prometheus configuration
+prometheusResources:
+  cpu:
+    request: 100m
+    limit: "1"
+  memory:
+    request: 300Mi
+    limit: 4096Mi
+
+# proxy injector configuration
+proxyInjectorResources: *controller_resources
+webhookFailurePolicy: Fail
+
+# service profile validator configuration
+spValidatorResources: *controller_resources
+
+# tap configuration
+tapResources: *controller_resources
+
+# web configuration
+webResources: *controller_resources
