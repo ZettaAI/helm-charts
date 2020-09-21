@@ -1,3 +1,7 @@
+{{- range .Values.chainMiddlewares }}
+{{- template "traefik.chainMiddleware" . }}
+{{- end }}
+
 {{- range .Values.headerMiddlewares }}
 {{- template "traefik.headerMiddleware" . }}
 {{- end }}
@@ -14,7 +18,7 @@
 {{- template "traefik.stripPrefixMiddleware" . }}
 {{- end }}
 
-{{- range .Values.chainMiddlewares }}
-{{- template "traefik.chainMiddleware" . }}
+{{- range .Values.forwardAuthMiddlewares }}
+{{- template "traefik.forwardAuthMiddleware" . }}
 {{- end }}
 

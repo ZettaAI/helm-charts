@@ -1,6 +1,9 @@
+routes: []
+
+chainMiddlewares: []
 headerMiddlewares: []
 redirectMiddlewares: []
 basicAuthMiddlewares: []
+forwardAuthMiddlewares: []
 stripPrefixMiddlewares: []
-chainMiddlewares: []
-routes: []
+

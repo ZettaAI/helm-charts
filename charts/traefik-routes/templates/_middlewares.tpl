@@ -2,6 +2,24 @@
 Generate various Traefik Middlewares
 https://docs.traefik.io/middlewares/overview/
 */}}
+
+
+{{- define "traefik.chainMiddleware" }}
+apiVersion: "traefik.containo.us/v1alpha1"
+kind: Middleware
+metadata:
+  name: {{ .name }}
+  namespace: {{ .namespace | default "default" | quote }}
+spec:
+  chain:
+    middlewares:
+    {{- range .middlewares }}
+    - name: {{ . | quote }}
+    {{- end }}
+---
+{{- end }}
+
+
 {{- define "traefik.headerMiddleware" }}
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
@@ -54,17 +72,14 @@ spec:
 {{- end }}
 
 
-{{- define "traefik.chainMiddleware" }}
+{{- define "traefik.forwardAuthMiddleware" }}
 apiVersion: "traefik.containo.us/v1alpha1"
 kind: Middleware
 metadata:
   name: {{ .name }}
   namespace: {{ .namespace | default "default" | quote }}
 spec:
-  chain:
-    middlewares:
-    {{- range .middlewares }}
-    - name: {{ . | quote }}
-    {{- end }}
+  forwardAuth:
+    {{- toYaml .forwardAuth | nindent 4 }}
 ---
 {{- end }}
