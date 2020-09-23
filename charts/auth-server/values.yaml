@@ -1,0 +1,60 @@
+authService:
+  enabled: &authServiceEnabled false
+  name: &authServiceName "auth-server"
+  annotations: {}
+  type: ClusterIP
+  ports: []
+authDeployment:
+  enabled: *authServiceEnabled
+  name: *authServiceName
+  affinity: {}
+  nodeSelector: {}
+  annotations: {}
+  image:
+    repository: null
+    tag: null
+    pullPolicy: Always
+  imagePullSecrets: []
+  command: []
+  env: []
+  replicaCount: 1
+  ports: []
+  resources:
+    requests:
+      cpu: 200m
+      memory: 500M
+  hpa:
+    enabled: false
+    minReplicas: 3
+    maxReplicas: 30
+    targetMem: 75
+    targetCPU: 90
+
+
+redisService:
+  enabled: &redisServiceEnabled false
+  name: &redisServiceName "redis"
+  annotations: {}
+  type: ClusterIP
+  ports: []
+redisDeployment:
+  enabled: *redisServiceEnabled
+  name: *redisServiceName
+  affinity: {}
+  nodeSelector: {}
+  annotations: {}
+  image:
+    repository: null
+    tag: null
+    pullPolicy: Always
+  imagePullSecrets: []
+  command: []
+  env: []
+  replicaCount: 1
+  ports: []
+  resources:
+    requests:
+      cpu: 1
+      memory: 6G
+  hpa:
+    enabled: false

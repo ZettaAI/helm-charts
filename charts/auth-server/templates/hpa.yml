@@ -1,0 +1,1 @@
+{{- template "auth-server.hpa" (dict "deployment" .Values.authDeployment "Chart" $.Chart) }}

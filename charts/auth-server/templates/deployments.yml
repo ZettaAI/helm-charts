@@ -1,0 +1,3 @@
+{{- $commonArgs := (dict "chart" .Chart.Name) }}
+{{- template "auth-server.deployment" (dict "deployment" .Values.authDeployment "args" $commonArgs) }}
+{{- template "auth-server.deployment" (dict "deployment" .Values.redisDeployment "args" $commonArgs) }}
