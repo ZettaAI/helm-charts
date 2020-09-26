@@ -1,6 +1,9 @@
 dependencies:
+- name: common
+  repository: http://zetta.ai/helm-charts/charts
+  version: 0.1.0
 - name: traefik-routes
   repository: http://zetta.ai/helm-charts/charts
   version: 0.3.0
-digest: sha256:88085085457f2389e0f3e9b1e4a41a268ecd0ff85d3e379bc729bc20e72ae75e
-generated: "2020-09-23T18:24:06.755442508+05:30"
+digest: sha256:9c100a48beb7956c336a6e864b5ca99d553c7f034fefe6fc4fa617a385a590a2
+generated: "2020-09-26T21:10:46.290371147+05:30"

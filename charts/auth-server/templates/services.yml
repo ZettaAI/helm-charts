@@ -1,2 +1,2 @@
-{{- template "auth-server.service" (dict "service" .Values.authService "target" .Values.authDeployment.name "Chart" $.Chart) }}
-{{- template "auth-server.service" (dict "service" .Values.redisService "target" .Values.redisDeployment.name "Chart" $.Chart) }}
+{{- template "common.service" (dict "service" .Values.authService "target" .Values.authDeployment.name) }}
+{{- template "common.service" (dict "service" .Values.redisService "target" .Values.redisDeployment.name) }}

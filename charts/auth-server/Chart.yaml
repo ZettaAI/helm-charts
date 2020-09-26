@@ -4,10 +4,13 @@ description: |-
   Creates service, deployment and routes for Graph Server authentication and authorization.
   A common redis deployment is used for the servers as cache.
 type: application
-version: 0.1.0
+version: 0.2.0
 appVersion: 0.1.0
 
 dependencies:
+- name: common
+  version: 0.1.0
+  repository: "http://zetta.ai/helm-charts/charts"
 - name: traefik-routes
   version: 0.3.0
   repository: "http://zetta.ai/helm-charts/charts"

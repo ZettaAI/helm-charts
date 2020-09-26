@@ -1,32 +1,32 @@
 {{/* Create kubernetes hpa object */}}
 
 {{- define "common.hpa" }}
-{{- if and .deployment.enabled .deployment.hpa.enabled }}
+{{- if and .enabled .hpa.enabled }}
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ .deployment.name | quote }}
+  name: {{ .name | quote }}
   labels:
 {{ include "common.labels-standard" . | indent 4 -}}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ .deployment.name | quote }}
-  minReplicas: {{ .deployment.hpa.minReplicas }}
-  maxReplicas: {{ .deployment.hpa.maxReplicas }}
+    name: {{ .name | quote }}
+  minReplicas: {{ .hpa.minReplicas }}
+  maxReplicas: {{ .hpa.maxReplicas }}
   metrics:
-  {{- if .deployment.hpa.targetCPU }}
+  {{- if .hpa.targetCPU }}
     - type: Resource
       resource:
         name: cpu
-        targetAverageUtilization: {{ .deployment.hpa.targetCPU }}
+        targetAverageUtilization: {{ .hpa.targetCPU }}
   {{- end }}
-  {{- if .deployment.hpa.targetMem }}
+  {{- if .hpa.targetMem }}
     - type: Resource
       resource:
         name: memory
-        targetAverageUtilization: {{ .deployment.hpa.targetMem }}
+        targetAverageUtilization: {{ .hpa.targetMem }}
   {{- end }}
 ---
 {{- end }}

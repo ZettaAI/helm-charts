@@ -1,2 +1,1 @@
-# env configmaps from values
-{{- template "auth-server.configmaps" (dict "env" .Values.authDeployment.env "prefix" .Values.authDeployment.name) }}
+{{- template "common.configmap-from-env" .Values.authDeployment.env  }}

@@ -1,7 +1,7 @@
 {{/* Create kubernetes configmap object from env list */}}
 
 {{- define "common.configmap-from-env" }}
-{{- range .env }}
+{{- range . }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
