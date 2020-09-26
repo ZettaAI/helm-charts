@@ -4,12 +4,12 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: {{ .secret.name }}
+  name: {{ .name }}
   labels:
 {{ include "common.labels-standard" . | indent 4 -}}
 type: Opaque
 data:
-  {{- range $key, $val := .secret.files }}
+  {{- range $key, $val := .files }}
   {{ $key }}: |-
     {{ $val | b64enc }}
   {{- end }}

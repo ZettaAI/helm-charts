@@ -2,7 +2,6 @@
 
 {{- define "common.deployment" }}
 {{- if .enabled }}
-{{- $deploymentName := .name }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -42,7 +41,7 @@ spec:
           envFrom:
           {{- range .env }}
           - configMapRef:
-              name: {{ printf "%s-%s" $deploymentName .name }}
+              name: {{ .name }}
           {{- end }}
           volumeMounts:
             {{- toYaml .volumeMounts | nindent 12 }}

@@ -1,15 +1,15 @@
 {{/* Create kubernetes service account object */}}
 
 {{- define "common.service" }}
-{{- if .serviceAccount.create -}}
+{{- if .create -}}
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: {{ .serviceAccount.name }}
+  name: {{ .name }}
   labels:
 {{ include "common.labels-standard" . | indent 4 -}}
   annotations:
-    {{- toYaml .serviceAccount.annotations | nindent 4 }}
+    {{- toYaml .annotations | nindent 4 }}
 ---
 {{- end }}
 {{- end }}

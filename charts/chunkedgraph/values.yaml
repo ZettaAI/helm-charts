@@ -53,6 +53,8 @@ readDeployment:
     repository: null
     tag: null
     pullPolicy: Always
+  volumes: []
+  volumeMounts: []
   imagePullSecrets: []
   command: []
   env: []
@@ -87,6 +89,8 @@ editDeployment:
     repository: null
     tag: null
     pullPolicy: Always
+  volumes: []
+  volumeMounts: []
   imagePullSecrets: []
   env: []
   replicaCount: 1
@@ -120,6 +124,8 @@ meshDeployment:
     repository: null
     tag: null
     pullPolicy: Always
+  volumes: []
+  volumeMounts: []
   imagePullSecrets: []
   env: []
   replicaCount: 1
@@ -153,6 +159,8 @@ remeshDeployment:
     repository: null
     tag: null
     pullPolicy: Always
+  volumes: []
+  volumeMounts: []
   imagePullSecrets: []
   env: []
   replicaCount: 1

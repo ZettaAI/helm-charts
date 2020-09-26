@@ -5,7 +5,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .name | quote }}
+  name: {{ .name }}
   labels:
 {{ include "common.labels-standard" . | indent 4 -}}
 data:
