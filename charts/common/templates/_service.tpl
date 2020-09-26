@@ -8,8 +8,6 @@ metadata:
   name: {{ .service.name | quote }}
   annotations:
     {{- toYaml .service.annotations | nindent 4 }}
-  labels:
-{{ include "common.labels-standard" $ | indent 4 -}}
 spec:
   selector:
     app: {{ .target | quote }}

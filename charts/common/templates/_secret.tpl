@@ -5,8 +5,6 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: {{ .name }}
-  labels:
-{{ include "common.labels-standard" $ | indent 4 -}}
 type: Opaque
 data:
   {{- range $key, $val := .files }}
