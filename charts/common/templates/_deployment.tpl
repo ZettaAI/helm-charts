@@ -7,7 +7,7 @@ kind: Deployment
 metadata:
   name: {{ .name | quote }}
   labels:
-{{ include "common.labels-standard" . | indent 4 -}}
+{{ include "common.labels-standard" $ | indent 4 -}}
 spec:
 {{- if not .hpa.enabled }}
   replicas: {{ .replicaCount }}

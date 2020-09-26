@@ -7,7 +7,7 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: {{ .name | quote }}
   labels:
-{{ include "common.labels-standard" . | indent 4 -}}
+{{ include "common.labels-standard" $ | indent 4 -}}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
