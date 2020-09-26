@@ -2,8 +2,10 @@
 
 [Helm](https://helm.sh/) is a package manager for Kubernetes.
 
-Available charts:
+Library charts:
+- [Common](http:/zettaai.github.io/helm-charts/charts/common)
 
+Application charts:
 - [Auth Server](http:/zettaai.github.io/helm-charts/charts/auth-server)
 - [ChunkedGraph](http:/zettaai.github.io/helm-charts/charts/chunkedgraph)
 - [Linkerd mTLS](http:/zettaai.github.io/helm-charts/charts/linkerd-mtls)
