@@ -1,3 +1,4 @@
+{{- template "common.configmap-from-env" .Values.env }}
 {{- template "common.configmap-from-env" .Values.readDeployment.env }}
 {{- template "common.configmap-from-env" .Values.editDeployment.env }}
 {{- template "common.configmap-from-env" .Values.meshDeployment.env }}

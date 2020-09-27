@@ -37,6 +37,7 @@ spec:
           resources:
             {{- toYaml .resources | nindent 12 }}
           envFrom:
+          {{- toYaml .envFrom | nindent 10 }}
           {{- range .env }}
           - configMapRef:
               name: {{ .name }}
