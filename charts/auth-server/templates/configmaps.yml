@@ -1,1 +1,1 @@
-{{- template "common.configmap-from-env" .Values.authDeployment.env  }}
+{{- template "common.configmap-from-env" .Values.authDeployment.env }}

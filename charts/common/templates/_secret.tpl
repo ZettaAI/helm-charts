@@ -1,6 +1,6 @@
-{{/* Create kubernetes secret object */}}
+{{/* Create kubernetes secret object from long strings */}}
 
-{{- define "common.secret-from-files" }}
+{{- define "common.secret-from-file-strings" }}
 apiVersion: v1
 kind: Secret
 metadata:

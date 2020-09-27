@@ -1,4 +1,5 @@
-{{- template "cg.hpa" (dict "deployment" .Values.readDeployment "Chart" $.Chart) }}
-{{- template "cg.hpa" (dict "deployment" .Values.editDeployment "Chart" $.Chart) }}
-{{- template "cg.hpa" (dict "deployment" .Values.meshDeployment "Chart" $.Chart) }}
-{{- template "cg.hpa" (dict "deployment" .Values.remeshDeployment "Chart" $.Chart) }}
+{{- template "common.hpa" .Values.readDeployment }}
+{{- template "common.hpa" .Values.editDeployment }}
+{{- template "common.hpa" .Values.meshDeployment }}
+{{- template "common.hpa" .Values.remeshDeployment }}
+

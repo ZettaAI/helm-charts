@@ -1,4 +1,4 @@
-{{- template "cg.service" (dict "service" .Values.readService "target" .Values.readDeployment.name "Chart" $.Chart) }}
-{{- template "cg.service" (dict "service" .Values.editService "target" .Values.editDeployment.name "Chart" $.Chart) }}
-{{- template "cg.service" (dict "service" .Values.meshService "target" .Values.meshDeployment.name "Chart" $.Chart) }}
-{{- template "cg.service" (dict "service" .Values.remeshService "target" .Values.remeshDeployment.name "Chart" $.Chart) }}
+{{- template "common.service" (dict "service" .Values.readService "target" .Values.readDeployment.name) }}
+{{- template "common.service" (dict "service" .Values.editService "target" .Values.editDeployment.name) }}
+{{- template "common.service" (dict "service" .Values.meshService "target" .Values.meshDeployment.name) }}
+{{- template "common.service" (dict "service" .Values.remeshService "target" .Values.remeshDeployment.name) }}

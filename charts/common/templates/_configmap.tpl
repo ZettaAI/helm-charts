@@ -13,3 +13,19 @@ data:
 ---
 {{- end}}
 {{- end }}
+
+
+{{/* Create kubernetes configmap object from YAML values*/}}
+
+{{- define "common.configmap-from-yaml" }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .name }}
+data:
+  {{- range .files }}
+  {{ .name }}: |-
+    {{- toYaml .content | nindent 4 }}
+  {{- end }}
+---
+{{- end }}

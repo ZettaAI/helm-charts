@@ -2,39 +2,20 @@
 whoami: false
 
 
-# these are converted to configmaps and added to pods as env vars
-# configmaps are named <chart_name>-<env_group_name> (eg: common)
-# added to all deployments/pods so they must be common
-# for deployment specific add them to deployment.env
-env: []
-# - name: common
-#   vars:
-#     SHELL: /bin/bash
-
-
 datasets: []
 # example
-# - name: wc-lee-vnc.yml
-#   config:
-#     graph_id: vnc1_full_v3align_2
-#     backend_client:
-#       TYPE: bigtable
-#       CONFIG:
-#         ADMIN: true
-#         READ_ONLY: false
-#         PROJECT: zetta-lee-fly-vnc-001
-#         INSTANCE: chunkedgraphs
-
-
-# file names of secret keys for cloudvolume
-# these will be mounted as volumes
-# eg: if a file name is secret.json
-# volume.name: secret, subPath: secret.json
-# mountPath: /root/.cloudvolume/secrets
-# NOTE: this assumes kubernetes secrets are already present.
-# this limitation is because Helm does not support
-# loading files external to a chart for security reasons.
-cloudVolumeSecrets: []
+# - name: wc-lee
+#   files:
+#   - name: vnc.yml
+#     content:
+#       graph_id: vnc1_full_v3align_2
+#       backend_client:
+#         TYPE: bigtable
+#         CONFIG:
+#           ADMIN: true
+#           READ_ONLY: false
+#           PROJECT: zetta-lee-fly-vnc-001
+#           INSTANCE: chunkedgraphs
 
 
 readService:
