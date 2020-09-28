@@ -35,15 +35,21 @@ spec:
           ports:
             {{- toYaml .ports | nindent 12 }}
           resources:
+          {{- if .resources }}
             {{- toYaml .resources | nindent 12 }}
+          {{- end }}
           envFrom:
-          {{- toYaml .envFrom | nindent 10 }}
+          {{- if .envFrom }}
+            {{- toYaml .envFrom | nindent 12 }}
+          {{- end }}
           {{- range .env }}
           - configMapRef:
               name: {{ .name }}
           {{- end }}
           volumeMounts:
+          {{- if .volumeMounts }}
             {{- toYaml .volumeMounts | nindent 12 }}
+          {{- end }}
           {{- if .command }}
           command:
             {{- toYaml .command | nindent 12 }}
