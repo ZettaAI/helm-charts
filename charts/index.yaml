@@ -3,7 +3,7 @@ entries:
   auth-server:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-28T17:43:29.937154813+05:30"
+    created: "2020-09-28T20:07:24.981052146+05:30"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -22,7 +22,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-28T17:43:29.935511435+05:30"
+    created: "2020-09-28T20:07:24.97930987+05:30"
     dependencies:
     - name: traefik-routes
       repository: http://zetta.ai/helm-charts/charts
@@ -39,7 +39,21 @@ entries:
   chunkedgraph:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-28T17:43:29.943850227+05:30"
+    created: "2020-09-28T20:07:24.988621261+05:30"
+    dependencies:
+    - name: common
+      repository: http://zetta.ai/helm-charts/charts
+      version: 0.1.0
+    description: Deployment for chunkedgraph APIs.
+    digest: aa725d95000cc79fb8c80b49cd9961d28b6fc5c7cb50e833d45f00345e46884e
+    name: chunkedgraph
+    type: application
+    urls:
+    - chunkedgraph-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2020-09-28T20:07:24.987270062+05:30"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -53,7 +67,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-28T17:43:29.942069026+05:30"
+    created: "2020-09-28T20:07:24.985895803+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 5f7feaac081ef03fddb7bff7a9fc3eb503a56e11e4452b63314a88267d2c1c6e
     name: chunkedgraph
@@ -63,7 +77,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-28T17:43:29.940262209+05:30"
+    created: "2020-09-28T20:07:24.984719865+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 7347a614567618e74dcb75f6039e970dc434329b11fadb28681e69b10dadcf40
     name: chunkedgraph
@@ -73,7 +87,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-28T17:43:29.938763724+05:30"
+    created: "2020-09-28T20:07:24.98231592+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 16f62fd5869ddf5fd561778d4b2a57f5751e4486339f30fe06001ec18048fec7
     name: chunkedgraph
@@ -84,7 +98,7 @@ entries:
   common:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-28T17:43:29.944665059+05:30"
+    created: "2020-09-28T20:07:24.989169916+05:30"
     description: A library chart for common Kubernetes resources.
     digest: 8221b9767a111d1e59deec57072c7312d660dc8c47d4942e7b145a395d832bc8
     name: common
@@ -95,7 +109,7 @@ entries:
   linkerd-mtls:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-28T17:43:29.945590781+05:30"
+    created: "2020-09-28T20:07:24.989767164+05:30"
     description: |-
       Installs supporting elements for Linkerd multicluster communication.
       Assumes that cert-manager is installed.
@@ -108,7 +122,7 @@ entries:
   state-server:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-28T17:43:29.947078205+05:30"
+    created: "2020-09-28T20:07:24.990982242+05:30"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -117,7 +131,7 @@ entries:
       repository: http://zetta.ai/helm-charts/charts
       version: 0.3.0
     description: Creates service, deployment and routes for saving neuroglancer state.
-    digest: 8cead5049fc7a06815eb6361771563667dc0cd698b692050c4f720c9bcd4330d
+    digest: b8e77548d73c9c5680114b383b5a50d6b377b41aa0cf9a25c8804996a857b519
     name: state-server
     type: application
     urls:
@@ -126,7 +140,7 @@ entries:
   traefik-routes:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-28T17:43:29.949913023+05:30"
+    created: "2020-09-28T20:07:24.993187809+05:30"
     description: |-
       Chart for installing traefik routes. Requires Traefik Kubernetes CRDs.
       Includes template helpers for routes and middlewares.
@@ -139,7 +153,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-28T17:43:29.948878971+05:30"
+    created: "2020-09-28T20:07:24.992152422+05:30"
     description: |-
       Chart for installing traefik routes. Requires Traefik Kubernetes CRDs.
       Includes template helpers for routes and middlewares.
@@ -152,7 +166,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-09-28T17:43:29.948016971+05:30"
+    created: "2020-09-28T20:07:24.99157653+05:30"
     description: |-
       Chart for installing traefik routes. Requires Traefik Kubernetes CRDs.
       Includes template helpers for routes and middlewares.
@@ -163,4 +177,4 @@ entries:
     urls:
     - traefik-routes-0.1.0.tgz
     version: 0.1.0
-generated: "2020-09-28T17:43:29.928107986+05:30"
+generated: "2020-09-28T20:07:24.977582896+05:30"

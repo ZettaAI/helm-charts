@@ -1,3 +1,11 @@
+secrets: []
+# example
+# - name: secret-name
+#   files:
+#     google-secret.json: |-
+#       <contents of service account json>
+
+
 stateService:
   enabled: &stateServiceEnabled false
   name: &stateServiceName "state-server"

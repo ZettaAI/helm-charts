@@ -25,6 +25,14 @@ datasets: []
 #           INSTANCE: chunkedgraphs
 
 
+secrets: []
+# example
+# - name: secret-name
+#   files:
+#     google-secret.json: |-
+#       <contents of service account json>
+
+
 readService:
   enabled: &readServiceEnabled false
   name: &readServiceName "chunkedgraph-read"
