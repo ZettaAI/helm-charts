@@ -1,0 +1,33 @@
+stateService:
+  enabled: &stateServiceEnabled false
+  name: &stateServiceName "state-server"
+  annotations: {}
+  type: ClusterIP
+  ports: []
+stateDeployment:
+  enabled: *stateServiceEnabled
+  name: *stateServiceName
+  affinity: {}
+  nodeSelector: {}
+  annotations: {}
+  image:
+    repository: null
+    tag: null
+    pullPolicy: Always
+  volumes: []
+  volumeMounts: []
+  imagePullSecrets: []
+  command: []
+  env: []
+  replicaCount: 1
+  ports: []
+  resources:
+    requests:
+      cpu: 200m
+      memory: 500M
+  hpa:
+    enabled: false
+    minReplicas: 3
+    maxReplicas: 30
+    targetMem: 75
+    targetCPU: 90

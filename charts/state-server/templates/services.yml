@@ -1,0 +1,1 @@
+{{- template "common.service" (dict "service" .Values.stateService "target" .Values.stateDeployment.name) }}

@@ -1,0 +1,1 @@
+{{- template "common.configmap-from-env" .Values.stateDeployment.env }}
