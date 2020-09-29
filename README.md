@@ -1,5 +1,3 @@
-## Helm Charts
-
 [Helm](https://helm.sh/) is a package manager for Kubernetes.
 
 Library charts:

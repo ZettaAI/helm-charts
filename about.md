@@ -1,5 +1,5 @@
 ---
 layout: page
-title: View on GitHub
-permalink: https://github.com/ZettaAI/helm-charts
+title: About
+permalink: /
 ---
