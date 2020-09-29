@@ -1,4 +1,7 @@
-## Routes and Middlewares for Traefik
+---
+layout: page
+title: Routes and Middlewares for Traefik
+---
 
 Creates routes and middlewares for Treafik.
 

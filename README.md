@@ -1,3 +1,9 @@
+---
+layout: page
+title: View on GitHub
+permalink: https://github.com/ZettaAI/helm-charts
+---
+
 ## Helm Charts
 
 [Helm](https://helm.sh/) is a package manager for Kubernetes.

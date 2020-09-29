@@ -16,7 +16,9 @@ spec:
   template:
     metadata:
       annotations:
+        {{- if .helmRollOnUpgrade }}
         rollme: {{ randAlphaNum 5 | quote }}
+        {{- end }}
         {{- range $key, $val := .annotations }}
         {{ $key }}: {{ $val | quote }}
         {{- end }}

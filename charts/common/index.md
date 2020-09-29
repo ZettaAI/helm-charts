@@ -1,4 +1,7 @@
-## Commom Kubernetes Templates
+---
+layout: page
+title: Commom Kubernetes Templates
+---
 
 Helm template helpers for creating common kubernetes objects.
 

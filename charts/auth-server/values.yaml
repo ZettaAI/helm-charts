@@ -7,6 +7,7 @@ authService:
 authDeployment:
   enabled: *authServiceEnabled
   name: *authServiceName
+  helmRollOnUpgrade: true
   affinity: {}
   nodeSelector: {}
   annotations: {}
@@ -42,6 +43,7 @@ redisService:
 redisDeployment:
   enabled: *redisServiceEnabled
   name: *redisServiceName
+  helmRollOnUpgrade: false
   affinity: {}
   nodeSelector: {}
   annotations: {}

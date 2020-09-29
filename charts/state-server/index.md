@@ -1,4 +1,7 @@
-## State Server
+---
+layout: page
+title: State Server
+---
 
 Creates service, deployment and routes for saving neuroglancer state.
 

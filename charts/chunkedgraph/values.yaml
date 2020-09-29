@@ -42,6 +42,7 @@ readService:
 readDeployment:
   enabled: *readServiceEnabled
   name: *readServiceName
+  helmRollOnUpgrade: true
   affinity: {}
   nodeSelector: {}
   annotations: {}
@@ -77,6 +78,7 @@ editService:
 editDeployment:
   enabled: *editServiceEnabled
   name: *editServiceName
+  helmRollOnUpgrade: true
   affinity: {}
   nodeSelector: {}
   annotations: {}
@@ -112,6 +114,7 @@ meshService:
 meshDeployment:
   enabled: *meshServiceEnabled
   name: *meshServiceName
+  helmRollOnUpgrade: true
   affinity: {}
   nodeSelector: {}
   annotations: {}
@@ -147,6 +150,7 @@ remeshService:
 remeshDeployment:
   enabled: *remeshServiceEnabled
   name: *remeshServiceName
+  helmRollOnUpgrade: true
   affinity: {}
   nodeSelector: {}
   annotations: {}

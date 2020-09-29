@@ -1,4 +1,7 @@
-## Chunkedgraph APIs
+---
+layout: page
+title: Chunkedgraph APIs
+---
 
 Creates service, deployment and HPA for reading, editing, meshing ChunkedGraph APIs.
 

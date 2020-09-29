@@ -1,4 +1,7 @@
-## Auth Server
+---
+layout: page
+title: Auth Server
+---
 
 Creates service, deployment and routes for Graph Server authentication and authorization.
 A common redis deployment is used for the servers as cache.

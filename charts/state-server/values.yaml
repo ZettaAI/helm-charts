@@ -15,6 +15,7 @@ stateService:
 stateDeployment:
   enabled: *stateServiceEnabled
   name: *stateServiceName
+  helmRollOnUpgrade: true
   affinity: {}
   nodeSelector: {}
   annotations: {}

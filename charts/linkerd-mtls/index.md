@@ -1,4 +1,7 @@
-## Linkerd mTLS
+---
+layout: page
+title: Linkerd mTLS
+---
 
 Installs supporting elements for Linkerd multicluster communication.
 More details [here](https://linkerd.io/2/tasks/automatically-rotating-control-plane-tls-credentials/).
