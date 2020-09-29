@@ -1,3 +1,9 @@
+---
+layout: page
+title: Helm Charts
+permalink: /
+---
+
 [Helm](https://helm.sh/) is a package manager for Kubernetes.
 
 Library charts:
