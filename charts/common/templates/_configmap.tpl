@@ -29,3 +29,19 @@ data:
   {{- end }}
 ---
 {{- end }}
+
+
+{{/* Create kubernetes configmap object from file strings*/}}
+
+{{- define "common.configmap-from-file-strings" }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .name }}
+data:
+  {{- range $key, $val := .files }}
+  {{ $key }}: |-
+    {{ $val }}
+  {{- end }}
+---
+{{- end }}
