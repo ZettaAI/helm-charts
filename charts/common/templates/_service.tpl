@@ -12,6 +12,9 @@ spec:
   selector:
     app: {{ .target | quote }}
   type: {{ .service.type }}
+  {{- if .service.loadBalancerIP }}
+  loadBalancerIP: {{ .service.loadBalancerIP }}
+  {{- end }}
   ports:
     {{- toYaml .service.ports | nindent 4 }}
 ---

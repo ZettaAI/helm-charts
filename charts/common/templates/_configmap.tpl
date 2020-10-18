@@ -41,7 +41,7 @@ metadata:
 data:
   {{- range $key, $val := .files }}
   {{ $key }}: |-
-    {{ $val }}
+{{ $val | indent 4 }}
   {{- end }}
 ---
 {{- end }}
