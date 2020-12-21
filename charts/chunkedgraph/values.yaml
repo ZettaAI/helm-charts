@@ -54,7 +54,7 @@ readDeployment:
   volumeMounts: []
   imagePullSecrets: []
   command: []
-  envFrom: {}
+  envFrom: []
   env: []
   replicaCount: 1
   ports: []
@@ -91,7 +91,7 @@ editDeployment:
   volumes: []
   volumeMounts: []
   imagePullSecrets: []
-  envFrom: {}
+  envFrom: []
   env: []
   replicaCount: 1
   ports: []
@@ -128,7 +128,7 @@ meshDeployment:
   volumes: []
   volumeMounts: []
   imagePullSecrets: []
-  envFrom: {}
+  envFrom: []
   env: []
   replicaCount: 1
   ports: []
@@ -165,7 +165,7 @@ remeshDeployment:
   volumes: []
   volumeMounts: []
   imagePullSecrets: []
-  envFrom: {}
+  envFrom: []
   env: []
   replicaCount: 1
   ports: []
