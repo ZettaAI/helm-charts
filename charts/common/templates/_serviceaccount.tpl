@@ -6,8 +6,13 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: {{ .name }}
+  namespace: {{ .namespace | default "default" | quote }}
   annotations:
     {{- toYaml .annotations | nindent 4 }}
+  labels:
+    {{- range $key, $val := .annotations }}
+    {{ $key }}: {{ $val | quote }}
+    {{- end }}
 ---
 {{- end }}
 {{- end }}

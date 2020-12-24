@@ -5,6 +5,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: {{ .name }}
+  namespace: {{ .namespace | default "default" | quote }}
 type: Opaque
 data:
   {{- range $key, $val := .files }}

@@ -6,6 +6,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ .service.name | quote }}
+  namespace: {{ .namespace | default "default" | quote }}
   annotations:
     {{- toYaml .service.annotations | nindent 4 }}
 spec:

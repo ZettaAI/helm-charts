@@ -6,6 +6,7 @@ apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
   name: {{ .name | quote }}
+  namespace: {{ .namespace | default "default" | quote }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1

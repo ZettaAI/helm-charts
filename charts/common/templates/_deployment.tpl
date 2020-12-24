@@ -6,6 +6,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .name | quote }}
+  namespace: {{ .namespace | default "default" | quote }}
 spec:
 {{- if not .hpa.enabled }}
   replicas: {{ .replicaCount }}
@@ -24,6 +25,9 @@ spec:
         {{- end }}
       labels:
         app: {{ .name | quote }}
+        {{- range $key, $val := .annotations }}
+        {{ $key }}: {{ $val | quote }}
+        {{- end }}
     spec:
       affinity:
         {{- toYaml .affinity | nindent 8 }}
