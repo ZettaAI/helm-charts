@@ -1,0 +1,28 @@
+configFromEnvironmentVariables: []
+# - name: bigtable
+#   vars:
+#     BIGTABLE_PROJECT: test
+#     BIGTABLE_INSTANCE: test
+#     GOOGLE_APPLICATION_CREDENTIALS: /home/google-secret.json
+
+
+configFromStrings: []
+# - name: server-config
+#   files:
+#     server.conf: |-
+#       Some: long
+#       multiline: string
+#     data.csv: |-
+#       Hello, world, 1, 2, 3
+
+configFromYAML: []
+# - name: app-config
+#   files:
+#   - name: graph.yml
+#     content:
+#       graph_id: some_graph
+#       backend_client:
+#         TYPE: bigtable
+#         CONFIG:
+#           ADMIN: true
+#           READ_ONLY: false

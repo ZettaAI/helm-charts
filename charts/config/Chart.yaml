@@ -1,0 +1,14 @@
+apiVersion: v2
+name: config
+description: |-
+  A Helm chart for Kubernetes config objects.
+  Managing config as a separate deployment makes it easy to update it
+  without interfering with application deployment.
+type: application
+version: 0.1.0
+appVersion: 0.1.0
+
+dependencies:
+- name: common
+  version: 0.1.0
+  repository: "http://zetta.ai/helm-charts/charts"

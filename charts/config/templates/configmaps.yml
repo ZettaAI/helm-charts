@@ -1,0 +1,9 @@
+{{- template "common.configmap-from-env" .Values.configFromEnvironmentVariables }}
+
+{{- range .Values.configFromStrings }}
+{{- template "common.configmap-from-file-strings" . }}
+{{- end }}
+
+{{- range .Values.configFromYAML }}
+{{- template "common.configmap-from-yaml" . }}
+{{- end }}
