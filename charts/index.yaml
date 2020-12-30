@@ -1,9 +1,24 @@
 apiVersion: v1
 entries:
+  annotation-framework:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2020-12-30T22:02:32.084256396+05:30"
+    dependencies:
+    - name: common
+      repository: http://zetta.ai/helm-charts/charts
+      version: 0.2.0
+    description: Annotation Framework Components - Engine, Info and Schema
+    digest: d28a64bea1522e573437bc8654a1f56a750cf1bf1efa66e52c3271efab58e210
+    name: annotation-framework
+    type: application
+    urls:
+    - annotation-framework-0.1.0.tgz
+    version: 0.1.0
   auth-server:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.465722075+05:30"
+    created: "2020-12-30T22:02:32.087507599+05:30"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -22,7 +37,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.464733986+05:30"
+    created: "2020-12-30T22:02:32.086024376+05:30"
     dependencies:
     - name: traefik-routes
       repository: http://zetta.ai/helm-charts/charts
@@ -39,7 +54,7 @@ entries:
   chunkedgraph:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.470953459+05:30"
+    created: "2020-12-30T22:02:32.096221836+05:30"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -53,7 +68,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.46971745+05:30"
+    created: "2020-12-30T22:02:32.094155044+05:30"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -67,7 +82,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.468526751+05:30"
+    created: "2020-12-30T22:02:32.092406501+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 5f7feaac081ef03fddb7bff7a9fc3eb503a56e11e4452b63314a88267d2c1c6e
     name: chunkedgraph
@@ -77,7 +92,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.467572659+05:30"
+    created: "2020-12-30T22:02:32.090582212+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 7347a614567618e74dcb75f6039e970dc434329b11fadb28681e69b10dadcf40
     name: chunkedgraph
@@ -87,7 +102,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.466651161+05:30"
+    created: "2020-12-30T22:02:32.089066503+05:30"
     description: Deployment for chunkedgraph APIs.
     digest: 16f62fd5869ddf5fd561778d4b2a57f5751e4486339f30fe06001ec18048fec7
     name: chunkedgraph
@@ -98,7 +113,7 @@ entries:
   common:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.471676985+05:30"
+    created: "2020-12-30T22:02:32.09901721+05:30"
     description: A library chart for common Kubernetes resources.
     digest: 52d8a861c019940887b9c2dd62e319006e9514cb736d6a99d331598c8adade68
     name: common
@@ -108,7 +123,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.471298684+05:30"
+    created: "2020-12-30T22:02:32.097638279+05:30"
     description: A library chart for common Kubernetes resources.
     digest: 0a7bd7bc044766c8611437aadc19075f896bef6e5a25eedd96d6dc5bef9ac17b
     name: common
@@ -119,7 +134,7 @@ entries:
   config:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.472190402+05:30"
+    created: "2020-12-30T22:02:32.100847822+05:30"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -137,7 +152,7 @@ entries:
   linkerd-mtls:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.472553005+05:30"
+    created: "2020-12-30T22:02:32.102075846+05:30"
     description: |-
       Installs supporting elements for Linkerd multicluster communication.
       Assumes that cert-manager is installed.
@@ -150,7 +165,7 @@ entries:
   state-server:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.484613394+05:30"
+    created: "2020-12-30T22:02:32.103591+05:30"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -168,7 +183,7 @@ entries:
   traefik-routes:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.485937937+05:30"
+    created: "2020-12-30T22:02:32.108349443+05:30"
     description: |-
       Chart for installing traefik routes. Requires Traefik Kubernetes CRDs.
       Includes template helpers for routes and middlewares.
@@ -181,7 +196,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.48558198+05:30"
+    created: "2020-12-30T22:02:32.10587222+05:30"
     description: |-
       Chart for installing traefik routes. Requires Traefik Kubernetes CRDs.
       Includes template helpers for routes and middlewares.
@@ -194,7 +209,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2020-12-24T21:31:44.485222114+05:30"
+    created: "2020-12-30T22:02:32.104789371+05:30"
     description: |-
       Chart for installing traefik routes. Requires Traefik Kubernetes CRDs.
       Includes template helpers for routes and middlewares.
@@ -205,4 +220,4 @@ entries:
     urls:
     - traefik-routes-0.1.0.tgz
     version: 0.1.0
-generated: "2020-12-24T21:31:44.463599414+05:30"
+generated: "2020-12-30T22:02:32.074259093+05:30"

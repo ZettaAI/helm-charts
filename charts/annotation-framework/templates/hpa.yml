@@ -1,0 +1,4 @@
+{{- template "common.hpa" .Values.infoDeployment }}
+{{- template "common.hpa" .Values.engineDeployment }}
+{{- template "common.hpa" .Values.schemaDeployment }}
+

@@ -1,0 +1,117 @@
+# dummy deployment for testing
+whoami: false
+
+# common env vars
+env: []
+
+# common secrets
+secrets: []
+
+# common config files
+configFromStrings: []
+
+# Annotation Engine Specific Values
+engineSecrets: []
+engineService:
+  enabled: &engineServiceEnabled false
+  name: &engineServiceName "annotation-engine"
+  type: ClusterIP
+  annotations: {}
+  ports: []
+engineDeployment:
+  enabled: *engineServiceEnabled
+  name: *engineServiceName
+  helmRollOnUpgrade: true
+  annotations: {}
+  affinity: {}
+  image:
+    repository: null
+    tag: null
+    pullPolicy: Always
+  volumes: []
+  volumeMounts: []
+  command: []
+  env: []
+  replicaCount: 1
+  ports: []
+  resources:
+    requests:
+      cpu: 100m
+      memory: 200M
+  hpa:
+    enabled: false
+    minReplicas: 3
+    maxReplicas: 30
+    targetMem: 85
+    targetCPU: 95
+
+# Annotation Info Serivce Specific Values
+infoSecrets: []
+infoService:
+  enabled: &infoServiceEnabled false
+  name: &infoServiceName "annotation-info"
+  type: ClusterIP
+  annotations: {}
+  ports: []
+infoDeployment:
+  enabled: *infoServiceEnabled
+  name: *infoServiceName
+  helmRollOnUpgrade: true
+  annotations: {}
+  affinity: {}
+  image:
+    repository: null
+    tag: null
+    pullPolicy: Always
+  volumes: []
+  volumeMounts: []
+  command: []
+  env: []
+  replicaCount: 1
+  ports: []
+  resources:
+    requests:
+      cpu: 100m
+      memory: 150M
+  hpa:
+    enabled: false
+    minReplicas: 3
+    maxReplicas: 30
+    targetMem: 85
+    targetCPU: 95
+
+
+# Annotation Schema Serivce Specific Values
+schemaSecrets: []
+schemaService:
+  enabled: &schemaServiceEnabled false
+  name: &schemaServiceName "annotation-schema"
+  type: ClusterIP
+  annotations: {}
+  ports: []
+schemaDeployment:
+  enabled: *schemaServiceEnabled
+  name: *schemaServiceName
+  helmRollOnUpgrade: true
+  annotations: {}
+  affinity: {}
+  image:
+    repository: null
+    tag: null
+    pullPolicy: Always
+  volumes: []
+  volumeMounts: []
+  command: []
+  env: []
+  replicaCount: 1
+  ports: []
+  resources:
+    requests:
+      cpu: 50m
+      memory: 100M
+  hpa:
+    enabled: false
+    minReplicas: 3
+    maxReplicas: 10
+    targetMem: 85
+    targetCPU: 95
