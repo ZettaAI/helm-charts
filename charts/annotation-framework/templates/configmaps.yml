@@ -1,0 +1,9 @@
+{{- template "common.configmap-from-env" .Values.env }}
+
+{{- range .Values.configFromStrings }}
+{{- template "common.configmap-from-file-strings" . }}
+{{- end }}
+
+{{- template "common.configmap-from-env" .Values.infoDeployment.env }}
+{{- template "common.configmap-from-env" .Values.engineDeployment.env }}
+{{- template "common.configmap-from-env" .Values.schemaDeployment.env }}

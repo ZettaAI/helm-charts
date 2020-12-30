@@ -1,0 +1,50 @@
+{{ if .Values.whoami }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-whoami
+  annotations:
+    mirror.linkerd.io/gateway-name: linkerd-gateway
+    mirror.linkerd.io/gateway-ns: linkerd-multicluster
+spec:
+  ports:
+    - protocol: TCP
+      name: web
+      port: 80
+      targetPort: 80
+  selector:
+    app: {{ .Release.Name }}-whoami
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: {{ .Release.Name }}-whoami
+  labels:
+    app: {{ .Release.Name }}-whoami
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-whoami
+  template:
+    metadata:
+      annotations:
+        rollme: {{ randAlphaNum 42 | quote }}
+        linkerd.io/inject: enabled
+      labels:
+        app: {{ .Release.Name }}-whoami
+    spec:
+      containers:
+        - name: {{ .Release.Name }}-whoami
+          image: containous/whoami
+          ports:
+            - name: web
+              containerPort: 80
+          resources:
+            requests:
+              cpu: 25m
+              memory: 50Mi
+            limits:
+              cpu: 75m
+              memory: 100Mi
+{{ end }}

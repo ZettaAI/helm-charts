@@ -1,0 +1,3 @@
+{{- template "common.service" (dict "service" .Values.infoService "target" .Values.infoDeployment.name) }}
+{{- template "common.service" (dict "service" .Values.engineService "target" .Values.engineDeployment.name) }}
+{{- template "common.service" (dict "service" .Values.schemaService "target" .Values.schemaDeployment.name) }}
