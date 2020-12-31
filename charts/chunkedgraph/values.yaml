@@ -37,6 +37,7 @@ readService:
   enabled: &readServiceEnabled false
   name: &readServiceName "chunkedgraph-read"
   annotations: {}
+  labels: {}
   type: ClusterIP
   ports: []
 readDeployment:
@@ -46,6 +47,7 @@ readDeployment:
   affinity: {}
   nodeSelector: {}
   annotations: {}
+  labels: {}
   image:
     repository: null
     tag: null
@@ -74,6 +76,7 @@ editService:
   enabled: &editServiceEnabled false
   name: &editServiceName "chunkedgraph-edit"
   annotations: {}
+  labels: {}
   type: ClusterIP
   ports: []
 editDeployment:
@@ -83,6 +86,7 @@ editDeployment:
   affinity: {}
   nodeSelector: {}
   annotations: {}
+  labels: {}
   command: []
   image:
     repository: null
@@ -111,6 +115,7 @@ meshService:
   enabled: &meshServiceEnabled false
   name: &meshServiceName "chunkedgraph-mesh"
   annotations: {}
+  labels: {}
   type: ClusterIP
   ports: []
 meshDeployment:
@@ -120,6 +125,7 @@ meshDeployment:
   affinity: {}
   nodeSelector: {}
   annotations: {}
+  labels: {}
   command: []
   image:
     repository: null
@@ -148,6 +154,7 @@ remeshService:
   enabled: &remeshServiceEnabled false
   name: &remeshServiceName "chunkedgraph-remesh"
   annotations: {}
+  labels: {}
   type: ClusterIP
   ports: []
 remeshDeployment:
@@ -157,6 +164,7 @@ remeshDeployment:
   affinity: {}
   nodeSelector: {}
   annotations: {}
+  labels: {}
   command: []
   image:
     repository: null

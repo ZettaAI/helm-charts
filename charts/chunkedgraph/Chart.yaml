@@ -2,10 +2,10 @@ apiVersion: v2
 name: chunkedgraph
 description: "Deployment for chunkedgraph APIs."
 type: application
-version: 0.6.0
+version: 0.7.0
 appVersion: 0.1.0
 
 dependencies:
 - name: common
-  version: 0.1.0
+  version: 0.2.0
   repository: "http://zetta.ai/helm-charts/charts"

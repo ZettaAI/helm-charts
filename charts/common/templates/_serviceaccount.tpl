@@ -10,7 +10,7 @@ metadata:
   annotations:
     {{- toYaml .annotations | nindent 4 }}
   labels:
-    {{- range $key, $val := .annotations }}
+    {{- range $key, $val := .labels }}
     {{ $key }}: {{ $val | quote }}
     {{- end }}
 ---

@@ -11,6 +11,7 @@ Library charts:
 
 Application charts:
 - [Auth Server](http:/zettaai.github.io/helm-charts/charts/auth-server)
+- [Annotation Framework](http:/zettaai.github.io/helm-charts/charts/annotation-framework)
 - [ChunkedGraph](http:/zettaai.github.io/helm-charts/charts/chunkedgraph)
 - [Linkerd mTLS](http:/zettaai.github.io/helm-charts/charts/linkerd-mtls)
 - [State Server](http:/zettaai.github.io/helm-charts/charts/state-server)

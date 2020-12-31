@@ -25,7 +25,7 @@ spec:
         {{- end }}
       labels:
         app: {{ .name | quote }}
-        {{- range $key, $val := .annotations }}
+        {{- range $key, $val := .labels }}
         {{ $key }}: {{ $val | quote }}
         {{- end }}
     spec:
