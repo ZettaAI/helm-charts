@@ -17,12 +17,14 @@ engineService:
   name: &engineServiceName "annotation-engine"
   type: ClusterIP
   annotations: {}
+  labels: {}
   ports: []
 engineDeployment:
   enabled: *engineServiceEnabled
   name: *engineServiceName
   helmRollOnUpgrade: true
   annotations: {}
+  labels: {}
   affinity: {}
   image:
     repository: null
@@ -52,12 +54,14 @@ infoService:
   name: &infoServiceName "annotation-info"
   type: ClusterIP
   annotations: {}
+  labels: {}
   ports: []
 infoDeployment:
   enabled: *infoServiceEnabled
   name: *infoServiceName
   helmRollOnUpgrade: true
   annotations: {}
+  labels: {}
   affinity: {}
   image:
     repository: null
@@ -88,12 +92,14 @@ schemaService:
   name: &schemaServiceName "annotation-schema"
   type: ClusterIP
   annotations: {}
+  labels: {}
   ports: []
 schemaDeployment:
   enabled: *schemaServiceEnabled
   name: *schemaServiceName
   helmRollOnUpgrade: true
   annotations: {}
+  labels: {}
   affinity: {}
   image:
     repository: null
