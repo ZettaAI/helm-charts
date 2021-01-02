@@ -8,7 +8,7 @@ https://docs.traefik.io/middlewares/overview/
 apiVersion: "traefik.containo.us/v1alpha1"
 kind: Middleware
 metadata:
-  name: {{ .name }}
+  name: {{ .name }}-{{ .Release.Name }}
   namespace: {{ .namespace | default "default" | quote }}
 spec:
   chain:
@@ -24,7 +24,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
-  name: {{ .name }}
+  name: {{ .name }}-{{ .Release.Name }}
   namespace: {{ .namespace | default "default" | quote }}
 spec:
   headers:
@@ -37,7 +37,7 @@ spec:
 apiVersion: "traefik.containo.us/v1alpha1"
 kind: Middleware
 metadata:
-  name: {{ .name }}
+  name: {{ .name }}-{{ .Release.Name }}
   namespace: {{ .namespace | default "default" | quote }}
 spec:
   redirectScheme:
@@ -50,7 +50,7 @@ spec:
 apiVersion: "traefik.containo.us/v1alpha1"
 kind: Middleware
 metadata:
-  name: {{ .name }}
+  name: {{ .name }}-{{ .Release.Name }}
   namespace: {{ .namespace | default "default" | quote }}
 spec:
   basicAuth:
@@ -63,7 +63,7 @@ spec:
 apiVersion: "traefik.containo.us/v1alpha1"
 kind: Middleware
 metadata:
-  name: {{ .name }}
+  name: {{ .name }}-{{ .Release.Name }}
   namespace: {{ .namespace | default "default" | quote }}
 spec:
   stripPrefix:
@@ -76,7 +76,7 @@ spec:
 apiVersion: "traefik.containo.us/v1alpha1"
 kind: Middleware
 metadata:
-  name: {{ .name }}
+  name: {{ .name }}-{{ .Release.Name }}
   namespace: {{ .namespace | default "default" | quote }}
 spec:
   forwardAuth:

@@ -5,5 +5,5 @@ description: |-
   Includes template helpers for routes and middlewares.
   Currently supports only 3 entrypoints web(80), websecure(443) and traefik(8080).
 type: application
-version: 0.3.0
+version: 0.4.0
 appVersion: 0.1.0

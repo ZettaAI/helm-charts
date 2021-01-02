@@ -6,7 +6,7 @@ https://docs.traefik.io/routing/providers/kubernetes-crd/
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: {{ .name }}
+  name: {{ .name }}-{{ .Release.Name }}
   namespace: {{ .namespace | default "default" | quote }}
 spec:
   entryPoints:

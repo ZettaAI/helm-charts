@@ -6,4 +6,3 @@ redirectMiddlewares: []
 basicAuthMiddlewares: []
 forwardAuthMiddlewares: []
 stripPrefixMiddlewares: []
-
