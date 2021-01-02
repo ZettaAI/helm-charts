@@ -12,8 +12,9 @@ metadata:
 spec:
   chain:
     middlewares:
+    {{- $rel := .Release -}}
     {{- range .middlewares }}
-    - name: {{ . | quote }}
+    - name: {{ . }}-{{ $rel }}
     {{- end }}
 ---
 {{- end }}
