@@ -1,5 +1,7 @@
 routes: []
 
+addPrefixMiddlewares: []
+
 basicAuthMiddlewares: []
 
 chainMiddlewares: []
@@ -9,6 +11,8 @@ forwardAuthMiddlewares: []
 headerMiddlewares: []
 
 redirectMiddlewares: []
+
+redirectRegexMiddlewares: []
 
 replacePathRegexMiddlwares: []
 

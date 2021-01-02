@@ -3,6 +3,18 @@ Generate various Traefik Middlewares
 https://docs.traefik.io/middlewares/overview/
 */}}
 
+{{- define "traefik.addPrefixMiddleware" }}
+apiVersion: "traefik.containo.us/v1alpha1"
+kind: Middleware
+metadata:
+  name: {{ .name }}-{{ .Release }}
+  namespace: {{ .namespace | default "default" | quote }}
+spec:
+  addPrefix:
+    {{- toYaml .addPrefix | nindent 4 }}
+---
+{{- end }}
+
 
 {{- define "traefik.basicAuthMiddleware" }}
 apiVersion: "traefik.containo.us/v1alpha1"
@@ -47,7 +59,6 @@ spec:
 {{- end }}
 
 
-
 {{- define "traefik.headerMiddleware" }}
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
@@ -70,6 +81,19 @@ metadata:
 spec:
   redirectScheme:
     {{- toYaml .redirectScheme | nindent 4 }}
+---
+{{- end }}
+
+
+{{- define "traefik.redirectRegexMiddleware" }}
+apiVersion: "traefik.containo.us/v1alpha1"
+kind: Middleware
+metadata:
+  name: {{ .name }}-{{ .Release }}
+  namespace: {{ .namespace | default "default" | quote }}
+spec:
+  redirectRegex:
+    {{- toYaml .redirectRegex | nindent 4 }}
 ---
 {{- end }}
 

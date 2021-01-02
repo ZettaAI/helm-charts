@@ -1,3 +1,8 @@
+{{- range .Values.addPrefixMiddlewares }}
+{{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
+{{- template "traefik.addPrefixMiddleware" $obj }}
+{{- end }}
+
 {{- range .Values.basicAuthMiddlewares }}
 {{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
 {{- template "traefik.basicAuthMiddleware" $obj }}
@@ -21,6 +26,11 @@
 {{- range .Values.redirectMiddlewares }}
 {{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
 {{- template "traefik.redirectMiddleware" $obj }}
+{{- end }}
+
+{{- range .Values.redirectRegexMiddlewares }}
+{{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
+{{- template "traefik.redirectRegexMiddleware" $obj }}
 {{- end }}
 
 {{- range .Values.replacePathRegexMiddlwares }}
