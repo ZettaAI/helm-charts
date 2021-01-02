@@ -1,6 +1,16 @@
+{{- range .Values.basicAuthMiddlewares }}
+{{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
+{{- template "traefik.basicAuthMiddleware" $obj }}
+{{- end }}
+
 {{- range .Values.chainMiddlewares }}
 {{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
 {{- template "traefik.chainMiddleware" $obj }}
+{{- end }}
+
+{{- range .Values.forwardAuthMiddlewares }}
+{{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
+{{- template "traefik.forwardAuthMiddleware" $obj }}
 {{- end }}
 
 {{- range .Values.headerMiddlewares }}
@@ -13,9 +23,9 @@
 {{- template "traefik.redirectMiddleware" $obj }}
 {{- end }}
 
-{{- range .Values.basicAuthMiddlewares }}
+{{- range .Values.replacePathRegexMiddlwares }}
 {{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
-{{- template "traefik.basicAuthMiddleware" $obj }}
+{{- template "traefik.replacePathRegexMiddlware" $obj }}
 {{- end }}
 
 {{- range .Values.stripPrefixMiddlewares }}
@@ -23,8 +33,7 @@
 {{- template "traefik.stripPrefixMiddleware" $obj }}
 {{- end }}
 
-{{- range .Values.forwardAuthMiddlewares }}
+{{- range .Values.stripPrefixRegexMiddlewares }}
 {{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
-{{- template "traefik.forwardAuthMiddleware" $obj }}
+{{- template "traefik.stripPrefixRegexMiddleware" $obj }}
 {{- end }}
-

@@ -1,8 +1,17 @@
 routes: []
 
-chainMiddlewares: []
-headerMiddlewares: []
-redirectMiddlewares: []
 basicAuthMiddlewares: []
+
+chainMiddlewares: []
+
 forwardAuthMiddlewares: []
+
+headerMiddlewares: []
+
+redirectMiddlewares: []
+
+replacePathRegexMiddlwares: []
+
 stripPrefixMiddlewares: []
+
+stripPrefixRegexMiddlewares: []

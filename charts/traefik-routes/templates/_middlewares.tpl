@@ -3,6 +3,20 @@ Generate various Traefik Middlewares
 https://docs.traefik.io/middlewares/overview/
 */}}
 
+
+{{- define "traefik.basicAuthMiddleware" }}
+apiVersion: "traefik.containo.us/v1alpha1"
+kind: Middleware
+metadata:
+  name: {{ .name }}-{{ .Release }}
+  namespace: {{ .namespace | default "default" | quote }}
+spec:
+  basicAuth:
+    {{- toYaml .basicAuth | nindent 4 }}
+---
+{{- end }}
+
+
 {{- define "traefik.chainMiddleware" }}
 apiVersion: "traefik.containo.us/v1alpha1"
 kind: Middleware
@@ -18,6 +32,20 @@ spec:
     {{- end }}
 ---
 {{- end }}
+
+
+{{- define "traefik.forwardAuthMiddleware" }}
+apiVersion: "traefik.containo.us/v1alpha1"
+kind: Middleware
+metadata:
+  name: {{ .name }}-{{ .Release }}
+  namespace: {{ .namespace | default "default" | quote }}
+spec:
+  forwardAuth:
+    {{- toYaml .forwardAuth | nindent 4 }}
+---
+{{- end }}
+
 
 
 {{- define "traefik.headerMiddleware" }}
@@ -46,15 +74,15 @@ spec:
 {{- end }}
 
 
-{{- define "traefik.basicAuthMiddleware" }}
-apiVersion: "traefik.containo.us/v1alpha1"
+{{- define "traefik.replacePathRegexMiddlware" }}
+apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
   name: {{ .name }}-{{ .Release }}
   namespace: {{ .namespace | default "default" | quote }}
 spec:
-  basicAuth:
-    {{- toYaml .basicAuth | nindent 4 }}
+  replacePathRegex:
+    {{- toYaml .replacePathRegex | nindent 4 }}
 ---
 {{- end }}
 
@@ -72,14 +100,14 @@ spec:
 {{- end }}
 
 
-{{- define "traefik.forwardAuthMiddleware" }}
+{{- define "traefik.stripPrefixRegexMiddleware" }}
 apiVersion: "traefik.containo.us/v1alpha1"
 kind: Middleware
 metadata:
   name: {{ .name }}-{{ .Release }}
   namespace: {{ .namespace | default "default" | quote }}
 spec:
-  forwardAuth:
-    {{- toYaml .forwardAuth | nindent 4 }}
+  stripPrefixRegex:
+    {{- toYaml .stripPrefixRegex | nindent 4 }}
 ---
 {{- end }}
