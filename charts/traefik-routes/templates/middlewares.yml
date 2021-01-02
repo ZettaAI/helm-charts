@@ -1,24 +1,30 @@
 {{- range .Values.chainMiddlewares }}
-{{- template "traefik.chainMiddleware" . }}
+{{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
+{{- template "traefik.chainMiddleware" $obj }}
 {{- end }}
 
 {{- range .Values.headerMiddlewares }}
-{{- template "traefik.headerMiddleware" . }}
+{{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
+{{- template "traefik.headerMiddleware" $obj }}
 {{- end }}
 
 {{- range .Values.redirectMiddlewares }}
-{{- template "traefik.redirectMiddleware" . }}
+{{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
+{{- template "traefik.redirectMiddleware" $obj }}
 {{- end }}
 
 {{- range .Values.basicAuthMiddlewares }}
-{{- template "traefik.basicAuthMiddleware" . }}
+{{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
+{{- template "traefik.basicAuthMiddleware" $obj }}
 {{- end }}
 
 {{- range .Values.stripPrefixMiddlewares }}
-{{- template "traefik.stripPrefixMiddleware" . }}
+{{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
+{{- template "traefik.stripPrefixMiddleware" $obj }}
 {{- end }}
 
 {{- range .Values.forwardAuthMiddlewares }}
-{{- template "traefik.forwardAuthMiddleware" . }}
+{{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
+{{- template "traefik.forwardAuthMiddleware" $obj }}
 {{- end }}
 

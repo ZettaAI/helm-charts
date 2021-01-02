@@ -2,11 +2,12 @@
 Generate Traefik IngressRoute
 https://docs.traefik.io/routing/providers/kubernetes-crd/
 */}}
+
 {{- define "traefik.ingressroute" }}
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: {{ .name }}-{{ .Release.Name }}
+  name: {{ .name }}-{{ .Release }}
   namespace: {{ .namespace | default "default" | quote }}
 spec:
   entryPoints:

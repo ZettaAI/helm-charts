@@ -1,3 +1,4 @@
 {{- range .Values.routes }}
-{{- template "traefik.ingressroute" . }}
+{{- $obj := mustMerge . (dict "Release" $.Release.Name) -}}
+{{- template "traefik.ingressroute" $obj }}
 {{- end }}
