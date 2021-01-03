@@ -1,0 +1,13 @@
+apiVersion: v2
+name: simple-cronjob
+description: |-
+  Cron jobs.
+  https://stackoverflow.com/questions/52422300/how-to-schedule-pods-restart
+type: application
+version: 0.1.0
+appVersion: 0.1.0
+
+dependencies:
+- name: common
+  version: 0.2.0
+  repository: "http://zetta.ai/helm-charts/charts"

@@ -1,0 +1,22 @@
+serviceAccount:
+  name: &serviceAccount null
+  create: true
+
+cron:
+  name: *serviceAccount
+  concurrencyPolicy: Forbid
+  schedule: null
+  backoffLimit: 1
+  activeDeadlineSeconds: 300
+  restartPolicy: Never
+  serviceAccountName: *serviceAccount
+  containers: []
+
+role:
+  name: *serviceAccount
+  rules:
+  - apiGroups: []
+    resources: []
+    resourceNames: []
+    verbs: []
+

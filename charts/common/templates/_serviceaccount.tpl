@@ -1,6 +1,6 @@
 {{/* Create kubernetes service account object */}}
 
-{{- define "common.service" }}
+{{- define "common.serviceaccount" }}
 {{- if .create -}}
 apiVersion: v1
 kind: ServiceAccount

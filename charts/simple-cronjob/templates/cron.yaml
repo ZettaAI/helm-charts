@@ -1,0 +1,18 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ .Values.cron.name | quote }}
+  namespace: {{ .Values.cron.namespace | default "default" | quote }}
+spec:
+  schedule: {{ .Values.cron.schedule | quote }}
+  concurrencyPolicy: {{ .Values.cron.concurrencyPolicy | quote }}
+  jobTemplate:
+    spec:
+      backoffLimit: {{ .Values.cron.backoffLimit }}
+      activeDeadlineSeconds: {{ .Values.cron.activeDeadlineSeconds }}
+      template:
+        spec:
+          serviceAccountName: {{ .Values.serviceAccount.name | quote }}
+          restartPolicy: {{ .Values.cron.restartPolicy | quote }}
+          containers:
+          {{- toYaml .Values.cron.containers | nindent 10 }}
