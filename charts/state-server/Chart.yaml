@@ -11,5 +11,5 @@ dependencies:
   version: 0.1.0
   repository: "http://zetta.ai/helm-charts/charts"
 - name: traefik-routes
-  version: 0.3.0
+  version: 0.6.0
   repository: "http://zetta.ai/helm-charts/charts"
