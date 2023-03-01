@@ -3,7 +3,7 @@ entries:
   annotation-framework:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.90547806-06:00"
+    created: "2023-03-01T14:34:08.289374162-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -18,7 +18,7 @@ entries:
   auth-server:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.908376798-06:00"
+    created: "2023-03-01T14:34:08.290810689-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -36,7 +36,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.907095298-06:00"
+    created: "2023-03-01T14:34:08.290016786-06:00"
     dependencies:
     - name: traefik-routes
       repository: http://zetta.ai/helm-charts/charts
@@ -52,7 +52,7 @@ entries:
   chunkedgraph:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.915717207-06:00"
+    created: "2023-03-01T14:34:08.297905961-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -66,7 +66,7 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.914273929-06:00"
+    created: "2023-03-01T14:34:08.296902595-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -80,7 +80,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.913000841-06:00"
+    created: "2023-03-01T14:34:08.295712622-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -94,7 +94,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.911767637-06:00"
+    created: "2023-03-01T14:34:08.294602754-06:00"
     description: Deployment for chunkedgraph APIs.
     digest: 5f7feaac081ef03fddb7bff7a9fc3eb503a56e11e4452b63314a88267d2c1c6e
     name: chunkedgraph
@@ -104,7 +104,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.910596045-06:00"
+    created: "2023-03-01T14:34:08.29364366-06:00"
     description: Deployment for chunkedgraph APIs.
     digest: 7347a614567618e74dcb75f6039e970dc434329b11fadb28681e69b10dadcf40
     name: chunkedgraph
@@ -114,7 +114,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.909506622-06:00"
+    created: "2023-03-01T14:34:08.292460494-06:00"
     description: Deployment for chunkedgraph APIs.
     digest: 16f62fd5869ddf5fd561778d4b2a57f5751e4486339f30fe06001ec18048fec7
     name: chunkedgraph
@@ -125,7 +125,7 @@ entries:
   common:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.916288618-06:00"
+    created: "2023-03-01T14:34:08.298245218-06:00"
     description: A library chart for common Kubernetes resources.
     digest: ec8a87b2933951a1aedeaf58e28d2de8bffd46d8699abf586a04d15ec06a3813
     name: common
@@ -135,7 +135,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.916045794-06:00"
+    created: "2023-03-01T14:34:08.298079216-06:00"
     description: A library chart for common Kubernetes resources.
     digest: 0a7bd7bc044766c8611437aadc19075f896bef6e5a25eedd96d6dc5bef9ac17b
     name: common
@@ -146,7 +146,7 @@ entries:
   config:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.916682228-06:00"
+    created: "2023-03-01T14:34:08.298631183-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -163,7 +163,7 @@ entries:
   linkerd-mtls:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.916916013-06:00"
+    created: "2023-03-01T14:34:08.29881195-06:00"
     description: Installs supporting elements for Linkerd multicluster communication.
       Assumes that cert-manager is installed.
     digest: 132742ed5334b5289bac2a90a44a6f91e694d496d02115659040076d28931684
@@ -175,7 +175,7 @@ entries:
   simple-cronjob:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.91726785-06:00"
+    created: "2023-03-01T14:34:08.299138239-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -190,7 +190,7 @@ entries:
   state-server:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.919268186-06:00"
+    created: "2023-03-01T14:34:08.300421652-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -199,7 +199,7 @@ entries:
       repository: http://zetta.ai/helm-charts/charts
       version: 0.6.0
     description: Creates service, deployment and routes for saving neuroglancer state.
-    digest: 8303b2e9a82f8682515d3a833973d42af256a6c2e1a5c9915e2125dda8bcc605
+    digest: 91de3e7d4c89160648cda530caecce5dbd5bd6935d3a86c5fccb6e8679f127e2
     name: state-server
     type: application
     urls:
@@ -207,7 +207,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.918528888-06:00"
+    created: "2023-03-01T14:34:08.299754529-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -225,7 +225,7 @@ entries:
   traefik-routes:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.921186051-06:00"
+    created: "2023-03-01T14:34:08.301947544-06:00"
     description: Chart for installing traefik routes. Requires Traefik Kubernetes
       CRDs. Includes template helpers for routes and middlewares. Currently supports
       only 3 entrypoints web(80), websecure(443) and traefik(8080).
@@ -237,7 +237,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.920859596-06:00"
+    created: "2023-03-01T14:34:08.301475011-06:00"
     description: Chart for installing traefik routes. Requires Traefik Kubernetes
       CRDs. Includes template helpers for routes and middlewares. Currently supports
       only 3 entrypoints web(80), websecure(443) and traefik(8080).
@@ -249,7 +249,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.920551823-06:00"
+    created: "2023-03-01T14:34:08.301265692-06:00"
     description: Chart for installing traefik routes. Requires Traefik Kubernetes
       CRDs. Includes template helpers for routes and middlewares. Currently supports
       only 3 entrypoints web(80), websecure(443) and traefik(8080).
@@ -261,7 +261,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.920298013-06:00"
+    created: "2023-03-01T14:34:08.301076171-06:00"
     description: Chart for installing traefik routes. Requires Traefik Kubernetes
       CRDs. Includes template helpers for routes and middlewares. Currently supports
       only 3 entrypoints web(80), websecure(443) and traefik(8080).
@@ -273,7 +273,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.919908605-06:00"
+    created: "2023-03-01T14:34:08.30086738-06:00"
     description: Chart for installing traefik routes. Requires Traefik Kubernetes
       CRDs. Includes template helpers for routes and middlewares. Currently supports
       only 3 entrypoints web(80), websecure(443) and traefik(8080).
@@ -285,7 +285,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:29:29.919565757-06:00"
+    created: "2023-03-01T14:34:08.300618546-06:00"
     description: Chart for installing traefik routes. Requires Traefik Kubernetes
       CRDs. Includes template helpers for routes and middlewares. Currently supports
       only 3 entrypoints web(80), websecure(443) and traefik(8080).
@@ -295,4 +295,4 @@ entries:
     urls:
     - traefik-routes-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-01T14:29:29.89952151-06:00"
+generated: "2023-03-01T14:34:08.28859014-06:00"

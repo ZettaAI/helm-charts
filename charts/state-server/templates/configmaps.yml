@@ -1,1 +1,3 @@
-{{- template "common.configmap-from-env" .Values.stateDeployment.env }}
+{{- range .Values.stateDeployment.containers }}
+{{- template "common.secret-from-file-strings" .env }}
+{{- end }}
