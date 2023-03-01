@@ -8,7 +8,7 @@ metadata:
   name: {{ .name | quote }}
   namespace: {{ .namespace | default "default" | quote }}
 spec:
-{{- if not .hpa.enabled }}
+{{- if not .hpa.enabled | default false }}
   replicas: {{ .replicaCount }}
 {{- end }}
   selector:
@@ -34,34 +34,9 @@ spec:
       volumes:
         {{- toYaml .volumes | nindent 8 }}
       containers:
-        - name: {{ .name | quote }}
-          image: >-
-            {{ required "repo" .image.repository }}:{{ required "tag" .image.tag }}
-          imagePullPolicy: {{ .image.pullPolicy | quote }}
-          ports:
-            {{- toYaml .ports | nindent 12 }}
-          resources:
-          {{- if .resources }}
-            {{- toYaml .resources | nindent 12 }}
-          {{- end }}
-          envFrom:
-          {{- if .envFrom }}
-            {{- toYaml .envFrom | nindent 12 }}
-          {{- end }}
-          {{- range .env }}
-          - configMapRef:
-              name: {{ .name }}
-          {{- end }}
-          volumeMounts:
-          {{- if .volumeMounts }}
-            {{- toYaml .volumeMounts | nindent 12 }}
-          {{- end }}
-          {{- if .command }}
-          command:
-            {{- toYaml .command | nindent 12 }}
-          {{- else }}
-          command: [bash, -c, "trap : TERM INT; sleep infinity & wait"]
-          {{- end }}
+      {{- range .containers }}
+      {{- template "common.container" . }}
+      {{- end }}
       imagePullSecrets:
         {{- toYaml .imagePullSecrets | nindent 8 }}
       nodeSelector:

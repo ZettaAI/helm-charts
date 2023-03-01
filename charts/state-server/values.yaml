@@ -19,24 +19,10 @@ stateDeployment:
   affinity: {}
   nodeSelector: {}
   annotations: {}
-  image:
-    repository: null
-    tag: null
-    pullPolicy: Always
-  volumes: []
-  volumeMounts: []
-  imagePullSecrets: []
-  command: []
-  env: []
-  replicaCount: 1
-  ports: []
-  resources:
-    requests:
-      cpu: 200m
-      memory: 500M
+  containers: []
   hpa:
     enabled: false
     minReplicas: 3
-    maxReplicas: 30
+    maxReplicas: 10
     targetMem: 75
     targetCPU: 90
