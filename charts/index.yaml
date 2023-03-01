@@ -3,7 +3,7 @@ entries:
   annotation-framework:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.365716263-06:00"
+    created: "2023-03-01T14:19:21.428312579-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -18,7 +18,7 @@ entries:
   auth-server:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.368109385-06:00"
+    created: "2023-03-01T14:19:21.429762846-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -36,7 +36,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.366917935-06:00"
+    created: "2023-03-01T14:19:21.429029832-06:00"
     dependencies:
     - name: traefik-routes
       repository: http://zetta.ai/helm-charts/charts
@@ -52,7 +52,7 @@ entries:
   chunkedgraph:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.371942255-06:00"
+    created: "2023-03-01T14:19:21.433695878-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -66,7 +66,7 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.3711561-06:00"
+    created: "2023-03-01T14:19:21.433016481-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -80,7 +80,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.370478613-06:00"
+    created: "2023-03-01T14:19:21.43233374-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -94,7 +94,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.369798392-06:00"
+    created: "2023-03-01T14:19:21.431558199-06:00"
     description: Deployment for chunkedgraph APIs.
     digest: 5f7feaac081ef03fddb7bff7a9fc3eb503a56e11e4452b63314a88267d2c1c6e
     name: chunkedgraph
@@ -104,7 +104,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.369236076-06:00"
+    created: "2023-03-01T14:19:21.430992997-06:00"
     description: Deployment for chunkedgraph APIs.
     digest: 7347a614567618e74dcb75f6039e970dc434329b11fadb28681e69b10dadcf40
     name: chunkedgraph
@@ -114,7 +114,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.368686803-06:00"
+    created: "2023-03-01T14:19:21.430406311-06:00"
     description: Deployment for chunkedgraph APIs.
     digest: 16f62fd5869ddf5fd561778d4b2a57f5751e4486339f30fe06001ec18048fec7
     name: chunkedgraph
@@ -125,7 +125,7 @@ entries:
   common:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.372473163-06:00"
+    created: "2023-03-01T14:19:21.434242094-06:00"
     description: A library chart for common Kubernetes resources.
     digest: 80f9bfe1b3e5a375210f7391f399cb980f92403ce591cfec1b835b00465df602
     name: common
@@ -135,7 +135,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.372303664-06:00"
+    created: "2023-03-01T14:19:21.43401765-06:00"
     description: A library chart for common Kubernetes resources.
     digest: ec8a87b2933951a1aedeaf58e28d2de8bffd46d8699abf586a04d15ec06a3813
     name: common
@@ -145,7 +145,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.372134167-06:00"
+    created: "2023-03-01T14:19:21.433855472-06:00"
     description: A library chart for common Kubernetes resources.
     digest: 0a7bd7bc044766c8611437aadc19075f896bef6e5a25eedd96d6dc5bef9ac17b
     name: common
@@ -156,7 +156,7 @@ entries:
   config:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.37275137-06:00"
+    created: "2023-03-01T14:19:21.434522696-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -173,7 +173,7 @@ entries:
   linkerd-mtls:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.372943466-06:00"
+    created: "2023-03-01T14:19:21.435387919-06:00"
     description: Installs supporting elements for Linkerd multicluster communication.
       Assumes that cert-manager is installed.
     digest: 132742ed5334b5289bac2a90a44a6f91e694d496d02115659040076d28931684
@@ -185,7 +185,7 @@ entries:
   simple-cronjob:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.373314239-06:00"
+    created: "2023-03-01T14:19:21.436140844-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -200,7 +200,7 @@ entries:
   state-server:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.374572138-06:00"
+    created: "2023-03-01T14:19:21.437493902-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -209,7 +209,7 @@ entries:
       repository: http://zetta.ai/helm-charts/charts
       version: 0.6.0
     description: Creates service, deployment and routes for saving neuroglancer state.
-    digest: 2c54ca1eccf7b42bd8e53b2c0954da25d6a3eaf23a8766e0132203469825d01c
+    digest: f2b3521f7bf84ea59680f7c2a5782d6a2b46306cc506cd69712d69cbbd8346ba
     name: state-server
     type: application
     urls:
@@ -217,7 +217,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.373956371-06:00"
+    created: "2023-03-01T14:19:21.436830422-06:00"
     dependencies:
     - name: common
       repository: http://zetta.ai/helm-charts/charts
@@ -235,7 +235,7 @@ entries:
   traefik-routes:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.376993747-06:00"
+    created: "2023-03-01T14:19:21.438668697-06:00"
     description: Chart for installing traefik routes. Requires Traefik Kubernetes
       CRDs. Includes template helpers for routes and middlewares. Currently supports
       only 3 entrypoints web(80), websecure(443) and traefik(8080).
@@ -247,7 +247,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.37674616-06:00"
+    created: "2023-03-01T14:19:21.43845833-06:00"
     description: Chart for installing traefik routes. Requires Traefik Kubernetes
       CRDs. Includes template helpers for routes and middlewares. Currently supports
       only 3 entrypoints web(80), websecure(443) and traefik(8080).
@@ -259,7 +259,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.376479556-06:00"
+    created: "2023-03-01T14:19:21.438259014-06:00"
     description: Chart for installing traefik routes. Requires Traefik Kubernetes
       CRDs. Includes template helpers for routes and middlewares. Currently supports
       only 3 entrypoints web(80), websecure(443) and traefik(8080).
@@ -271,7 +271,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.375275364-06:00"
+    created: "2023-03-01T14:19:21.438070023-06:00"
     description: Chart for installing traefik routes. Requires Traefik Kubernetes
       CRDs. Includes template helpers for routes and middlewares. Currently supports
       only 3 entrypoints web(80), websecure(443) and traefik(8080).
@@ -283,7 +283,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.375044661-06:00"
+    created: "2023-03-01T14:19:21.437877508-06:00"
     description: Chart for installing traefik routes. Requires Traefik Kubernetes
       CRDs. Includes template helpers for routes and middlewares. Currently supports
       only 3 entrypoints web(80), websecure(443) and traefik(8080).
@@ -295,7 +295,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-03-01T14:13:43.374826613-06:00"
+    created: "2023-03-01T14:19:21.437692209-06:00"
     description: Chart for installing traefik routes. Requires Traefik Kubernetes
       CRDs. Includes template helpers for routes and middlewares. Currently supports
       only 3 entrypoints web(80), websecure(443) and traefik(8080).
@@ -305,4 +305,4 @@ entries:
     urls:
     - traefik-routes-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-01T14:13:43.364446105-06:00"
+generated: "2023-03-01T14:19:21.426642607-06:00"
