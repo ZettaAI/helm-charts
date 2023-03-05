@@ -1,0 +1,3 @@
+{{- range .Values.middleAuthDeployment.containers }}
+{{- template "common.configmap-from-env" .env }}
+{{- end }}
