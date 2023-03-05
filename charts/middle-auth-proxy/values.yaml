@@ -1,0 +1,28 @@
+secrets: []
+# example
+# - name: secret-name
+#   files:
+#     google-secret.json: |-
+#       <contents of service account json>
+
+
+middleAuthService:
+  enabled: &middleAuthServiceEnabled false
+  name: &middleAuthServiceName "middle-auth-proxy"
+  annotations: {}
+  type: ClusterIP
+  ports: []
+middleAuthDeployment:
+  enabled: *middleAuthServiceEnabled
+  name: *middleAuthServiceName
+  helmRollOnUpgrade: true
+  affinity: {}
+  nodeSelector: {}
+  annotations: {}
+  containers: []
+  hpa:
+    enabled: false
+    minReplicas: 3
+    maxReplicas: 10
+    targetMem: 75
+    targetCPU: 90

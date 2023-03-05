@@ -1,0 +1,11 @@
+apiVersion: v2
+name: middle-auth-proxy
+
+type: application
+version: 0.1.0
+appVersion: 0.1.0
+
+dependencies:
+- name: common
+  version: 0.3.0
+  repository: "http://zetta.ai/helm-charts/charts"

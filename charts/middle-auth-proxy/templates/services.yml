@@ -1,0 +1,1 @@
+{{- template "common.service" (dict "service" .Values.middleAuthService "target" .Values.middleAuthDeployment.name) }}
